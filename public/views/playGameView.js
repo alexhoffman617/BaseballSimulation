@@ -2,11 +2,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!../../templates/navbar.html',
+  'text!../../templates/playGame.html',
 ], function($, _, Backbone, template){
   var PlayGameView = Backbone.View.extend({
     el: $('#pageContent'),
-    tmpl: template,
     events: {
     	'click .btn': 'gfy'
     },
@@ -18,7 +17,8 @@ define([
 		$(this.$el.find('.btn')[1]).attr('class', 'btn btn-success');
     },
     render: function(){
-      this.$el.html(tmpl({}));
+      this.tmpl = _.template( template, {} );
+      this.$el.html(this.tmpl);
     }
   });
   // Our module now returns our view
