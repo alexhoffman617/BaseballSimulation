@@ -5,7 +5,7 @@ define([
   'text!../../templates/navbar.html',
   'text!../../templates/homePage.html',
   'text!../../views/playGameView.js'
-], function($, _, Backbone, navbarTemplate, homepageTemplate, playGameView){
+], function($, _, Backbone, navbarTemplate, homepageTemplate, PlayGameView){
   var ProjectListView = Backbone.View.extend({
     el: $('#pageContent'),
     PlayGameView: playGameView,
