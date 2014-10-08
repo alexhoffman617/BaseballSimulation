@@ -8,7 +8,6 @@ define([
 ], function($, _, Backbone, navbarTemplate, homepageTemplate, PlayGameView){
   var ProjectListView = Backbone.View.extend({
     el: $('#pageContent'),
-    PlayGameView: playGameView,
     events: {
     	'click #home': 'homepage',
     	'click #playGameTab': 'playGameTab',
