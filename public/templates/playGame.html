@@ -30,8 +30,13 @@
     							<th>Position</th>		
     							<th>Rating</th>
   							</tr>
+							<% for(i = 0; i < awayTeam.length; i++){ %>
 							<tr>
+								<td><%= i + 1 %></td>
+								<td><%= awayTeam[i].Position %></td>
+								<td><%= awayTeam[i].Rating %></td>
 							</tr>
+							<% } %>
 						</table>
 					</div>
 			</div>

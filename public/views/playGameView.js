@@ -3,7 +3,8 @@ define([
   'underscore',
   'backbone',
   'text!../../templates/playGame.html',
-], function($, _, Backbone, template){
+  '../../generators/teamGenerator',
+], function($, _, Backbone, template, teamGenerator){
   var PlayGameView = Backbone.View.extend({
     el: $('#pageContent'),
     events: {
@@ -25,8 +26,11 @@ define([
       return team
     },
     render: function(){
-      this.homeTeam = this.createTeam();
-      this.tmpl = _.template( template, { homeTeam: this.homeTeam });
+      var homeTeamGenerator = new teamGenerator();
+      var awayTeamGenerator = new teamGenerator();
+      this.homeTeam = homeTeamGenerator.createTeam(9);
+      this.awayTeam = awayTeamGenerator.createTeam(9);
+      this.tmpl = _.template( template, { homeTeam: this.homeTeam, awayTeam: this.awayTeam });
       this.$el.html(this.tmpl);
     }
   });
