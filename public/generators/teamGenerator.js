@@ -38,8 +38,9 @@ define([
       player.Position = this.getPosition();
       return player;
     },
-    createTeam: function(int numberOfPlayers){
-      this.team = []
+    createTeam: function(){
+      var numberOfPlayers = 9;
+      this.team = [];
       for(int i = 0; i <numberOfPlayers; i++){
         this.team[i]= this.createPlayer();
       }
