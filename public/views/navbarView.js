@@ -8,6 +8,7 @@ define([
 ], function($, _, Backbone, navbarTemplate, homepageTemplate, playGameView){
   var ProjectListView = Backbone.View.extend({
     el: $('#pageContent'),
+    PlayGameView: playGameView,
     events: {
     	'click #home': 'homepage',
     	'click #link1': 'playGameTab',
@@ -26,6 +27,8 @@ define([
     },
     playGameTab: function(){
     	 var data = {};
+       var playGameView = new PlayGameView();
+       this.$el.find('content').html(playGameView.render().el);
     },
     render: function(){
       // Using Underscore we can compile our template with data
