@@ -16,9 +16,9 @@ define([
       var totalweight=eval(this.ratingWeightArray.join("+"));
       this.weightedRatingsArray = new Array();
       var currentRating=0;
-      while (currentRating<ratingArray.length){ 
-          for (i=0; i<ratingWeightArray[currentRating]; i++){        
-            this.weightedRatingsArray[this.weightedRatingsArray.length]=ratingArray[currentRating];
+      while (currentRating < this.ratingArray.length){ 
+          for (i=0; i < this.ratingWeightArray[currentRating]; i++){        
+            this.weightedRatingsArray[this.weightedRatingsArray.length] = this.ratingArray[currentRating];
           }
         currentRating++;
       }
