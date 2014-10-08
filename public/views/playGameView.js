@@ -16,8 +16,17 @@ define([
 		this.$el.find('#playGameButton').text('Game Played')
     this.$el.find('#playGameButton').attr('class', 'btn btn-success');
     },
+    createTeam: function(){
+      var team = [];
+      var player = {}
+      player.Position = "LF"
+      player.Rating = 50;
+      team[0] = player;
+      return team
+    },
     render: function(){
-      this.tmpl = _.template( template, {} );
+      this.homeTeam = this.createTeam();
+      this.tmpl = _.template( template, { homeTeam: this.homeTeam });
       this.$el.html(this.tmpl);
     }
   });
