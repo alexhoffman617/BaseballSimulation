@@ -2,10 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!../../templates/navbar.html',
-  'text!../../templates/homePage.html',
   '../../views/playGameView.js'
-], function($, _, Backbone, navbarTemplate, homepageTemplate, PlayGameView){
+], function($, _, Backbone, PlayGameView){
   var ProjectListView = Backbone.View.extend({
     el: $('#pageContent'),
     events: {
@@ -15,10 +13,6 @@ define([
     },
     initialize: function(){
     	
-    },
-    gfy: function(){
-		$(this.$el.find('.btn')[1]).text('Go Fuck Yourself');
-		$(this.$el.find('.btn')[1]).attr('class', 'btn btn-success');
     },
     homepage: function() {
     	 var data = {};
