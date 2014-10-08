@@ -7,6 +7,6 @@ require.config({
 	}
 });
 
-require(['public/js/app',], function(App){
+require(['public/controllers/app',], function(App){
 	App.initialize();
 });
