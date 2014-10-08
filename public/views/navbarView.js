@@ -11,7 +11,7 @@ define([
     PlayGameView: playGameView,
     events: {
     	'click #home': 'homepage',
-    	'click #link1': 'playGameTab',
+    	'click #playGameTab': 'playGameTab',
     	'click .btn': 'gfy'
     },
     initialize: function(){
