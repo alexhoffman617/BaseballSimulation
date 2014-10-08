@@ -41,7 +41,7 @@ define([
     createTeam: function(){
       var numberOfPlayers = 9;
       this.team = [];
-      for(int i = 0; i <numberOfPlayers; i++){
+      for(var i = 0; i <numberOfPlayers; i++){
         this.team[i]= this.createPlayer();
       }
     }

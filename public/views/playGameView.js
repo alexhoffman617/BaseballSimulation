@@ -3,7 +3,7 @@ define([
   'underscore',
   'backbone',
   'text!../../templates/playGame.html',
-  '../../generators/teamGenerator',
+  '../../generators/teamGenerator.js',
 ], function($, _, Backbone, template, teamGenerator){
   var PlayGameView = Backbone.View.extend({
     el: $('#pageContent'),
