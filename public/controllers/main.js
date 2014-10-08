@@ -1,8 +1,8 @@
 require.config({
 	paths: {
-		jquery: 'public/js/jquery',
-		underscore: 'public/js/underscore',
-		backbone: 'public/js/backbone',
+		jquery: 'js/jquery',
+		underscore: 'js/underscore',
+		backbone: 'js/backbone',
 		noext: 'noext'
 	}
 });
