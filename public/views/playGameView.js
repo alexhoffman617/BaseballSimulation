@@ -4,7 +4,7 @@ define([
   'backbone',
   'text!../../templates/navbar.html',
 ], function($, _, Backbone, template){
-  var this = Backbone.View.extend({
+  var PlayGameView = Backbone.View.extend({
     el: $('#pageContent'),
     tmpl: template,
     events: {
@@ -22,5 +22,5 @@ define([
     }
   });
   // Our module now returns our view
-  return this;
+  return PlayGameView;
 });
