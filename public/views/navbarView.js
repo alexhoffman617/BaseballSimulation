@@ -26,8 +26,8 @@ define([
     },
     playGameTab: function(){
     	 var data = {};
-       var playGameView = new PlayGameView();
-       this.$el.find('content').html(playGameView.render().el);
+       var playGameView = new PlayGameView({ el: $("#content") });
+       playGameView.render();
     },
     render: function(){
       // Using Underscore we can compile our template with data
