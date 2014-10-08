@@ -41,9 +41,10 @@ define([
     createTeam: function(){
       var numberOfPlayers = 9;
       this.team = [];
-      for(var i = 0; i <numberOfPlayers; i++){
+      for(var i = 0; i < numberOfPlayers; i++){
         this.team[i]= this.createPlayer();
       }
+      return this.team;
     }
   });
   // Our module now returns our view
