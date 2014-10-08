@@ -15,7 +15,7 @@ define([
     	'click .btn': 'gfy'
     },
     initialize: function(){
-    	
+    	var x =1;
     },
     homepage: function() {
     	 var data = {};
