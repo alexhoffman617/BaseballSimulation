@@ -1,12 +1,12 @@
 require.config({
 	paths: {
-		jquery: 'libs/public/jquery',
-		underscore: 'libs/public/underscore',
-		backbone: 'libs/public/backbone',
+		jquery: 'public/js/jquery',
+		underscore: 'public/js/underscore',
+		backbone: 'public/js/backbone',
 		noext: 'noext'
 	}
 });
 
-require(['app',], function(App){
+require(['public/js/app',], function(App){
 	App.initialize();
 });
