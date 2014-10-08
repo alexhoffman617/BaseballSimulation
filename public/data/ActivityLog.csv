@@ -1,0 +1,225 @@
+"PostTime","Process","Step","Data","ErrorCode","ErrorColumn","ErrorString"
+"2014-04-14 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-14 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",148,,,"FileOpen" 
+"2014-04-24 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-24 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",220,,, 
+"2014-04-25 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-25 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",222,,,"FileOpen" 
+"2014-04-25 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-25 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",224,,,"FileOpen" 
+"2014-04-25 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-25 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",226,,, 
+"2014-04-25 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-25 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",228,,, 
+"2014-04-25 17:28:29.830","CompanyEmployees","LastName is ",228,,,"LastName" 
+"2014-04-25 17:25:57.297","CompanyEmployees","FirstName is ",228,,,"FirstName" 
+"2014-04-25 17:25:57.297","CompanyEmployees","LastName is ",228,,,"LastName" 
+"2014-04-25 17:25:57.297","CompanyEmployees","LastName is ",228,,,"LastName" 
+"2014-04-25 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-25 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",234,,, 
+"2014-04-24 17:28:29.830","CompanyEmployees","LastName is ",234,,,"LastName" 
+"2014-04-24 17:25:57.297","CompanyEmployees","FirstName is ",234,,,"FirstName" 
+"2014-04-24 17:25:57.297","CompanyEmployees","LastName is ",234,,,"LastName" 
+"2014-04-24 17:25:57.297","CompanyEmployees","LastName is ",234,,,"LastName" 
+"2014-04-24 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-24 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",240,,, 
+"2014-04-20 17:28:29.830","CompanyEmployees","LastName is ",240,,,"LastName" 
+"2014-04-20 17:25:57.297","CompanyEmployees","FirstName is ",240,,,"FirstName" 
+"2014-04-20 17:25:57.297","CompanyEmployees","LastName is ",240,,,"LastName" 
+"2014-04-20 17:25:57.297","CompanyEmployees","LastName is ",240,,,"LastName" 
+"2014-04-20 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-20 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",246,,, 
+"2014-04-29 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-29 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",248,,,"FileOpen" 
+"2014-05-09 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-05-09 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",250,,, 
+"2014-05-10 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-10 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",252,,,"FileOpen" 
+"2014-05-10 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-10 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",254,,,"FileOpen" 
+"2014-05-10 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-05-10 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",256,,, 
+"2014-05-10 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-05-10 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",258,,, 
+"2014-05-10 17:28:29.830","CompanyEmployees","LastName is ",258,,,"LastName" 
+"2014-05-10 17:25:57.297","CompanyEmployees","FirstName is ",258,,,"FirstName" 
+"2014-05-10 17:25:57.297","CompanyEmployees","LastName is ",258,,,"LastName" 
+"2014-05-10 17:25:57.297","CompanyEmployees","LastName is ",258,,,"LastName" 
+"2014-05-10 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-05-10 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",264,,, 
+"2014-05-09 17:28:29.830","CompanyEmployees","LastName is ",264,,,"LastName" 
+"2014-05-09 17:25:57.297","CompanyEmployees","FirstName is ",264,,,"FirstName" 
+"2014-05-09 17:25:57.297","CompanyEmployees","LastName is ",264,,,"LastName" 
+"2014-05-09 17:25:57.297","CompanyEmployees","LastName is ",264,,,"LastName" 
+"2014-05-09 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-05-09 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",270,,, 
+"2014-05-05 17:28:29.830","CompanyEmployees","LastName is ",270,,,"LastName" 
+"2014-05-05 17:25:57.297","CompanyEmployees","FirstName is ",270,,,"FirstName" 
+"2014-05-05 17:25:57.297","CompanyEmployees","LastName is ",270,,,"LastName" 
+"2014-05-05 17:25:57.297","CompanyEmployees","LastName is ",270,,,"LastName" 
+"2014-05-05 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-05-05 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",276,,, 
+"2014-04-29 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-29 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",278,,,"FileOpen" 
+"2014-04-29 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-29 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",280,,, 
+"2014-04-29 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-29 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",282,,, 
+"2014-04-30 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-30 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",284,,,"FileOpen" 
+"2014-04-30 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-30 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",286,,,"FileOpen" 
+"2014-04-30 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-30 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",288,,, 
+"2014-04-30 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-30 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",290,,, 
+"2014-04-30 17:28:29.830","CompanyEmployees","LastName is ",290,,,"LastName" 
+"2014-04-30 17:25:57.297","CompanyEmployees","FirstName is ",290,,,"FirstName" 
+"2014-04-30 17:25:57.297","CompanyEmployees","LastName is ",290,,,"LastName" 
+"2014-04-30 17:25:57.297","CompanyEmployees","LastName is ",290,,,"LastName" 
+"2014-04-30 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-30 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",296,,, 
+"2014-05-03 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-03 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",298,,,"FileOpen" 
+"2014-05-03 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-03 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",300,,,"FileOpen" 
+"2014-05-03 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-05-03 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",302,,, 
+"2014-05-03 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-05-03 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",304,,, 
+"2014-05-04 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-04 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",306,,,"FileOpen" 
+"2014-05-04 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-04 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",308,,,"FileOpen" 
+"2014-05-04 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-05-04 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",310,,, 
+"2014-05-04 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-05-04 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",312,,, 
+"2014-05-04 17:28:29.830","CompanyEmployees","LastName is ",312,,,"LastName" 
+"2014-05-04 17:25:57.297","CompanyEmployees","FirstName is ",312,,,"FirstName" 
+"2014-05-04 17:25:57.297","CompanyEmployees","LastName is ",312,,,"LastName" 
+"2014-05-04 17:25:57.297","CompanyEmployees","LastName is ",312,,,"LastName" 
+"2014-05-04 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-05-04 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",318,,, 
+"2014-05-03 17:28:29.830","CompanyEmployees","LastName is ",318,,,"LastName" 
+"2014-05-03 17:25:57.297","CompanyEmployees","FirstName is ",318,,,"FirstName" 
+"2014-05-03 17:25:57.297","CompanyEmployees","LastName is ",318,,,"LastName" 
+"2014-05-03 17:25:57.297","CompanyEmployees","LastName is ",318,,,"LastName" 
+"2014-05-03 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-05-03 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",324,,, 
+"2014-05-05 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-05 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",327,,,"FileOpen" 
+"2014-05-05 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-05 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",328,,,"FileOpen" 
+"2014-05-05 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-05-05 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",330,,, 
+"2014-05-05 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-05-05 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",332,,, 
+"2014-05-06 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-06 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",334,,,"FileOpen" 
+"2014-05-06 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-06 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",336,,,"FileOpen" 
+"2014-05-06 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-05-06 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",338,,, 
+"2014-05-06 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-05-06 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",340,,, 
+"2014-05-06 17:28:29.830","CompanyEmployees","LastName is ",340,,,"LastName" 
+"2014-05-06 17:25:57.297","CompanyEmployees","FirstName is ",340,,,"FirstName" 
+"2014-05-06 17:25:57.297","CompanyEmployees","LastName is ",340,,,"LastName" 
+"2014-05-06 17:25:57.297","CompanyEmployees","LastName is ",340,,,"LastName" 
+"2014-05-06 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-05-06 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",346,,, 
+"2014-05-09 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-09 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",348,,,"FileOpen" 
+"2014-05-09 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-05-09 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",350,,,"FileOpen" 
+"2014-05-09 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-05-09 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",352,,, 
+"2014-04-29 17:28:29.830","CompanyEmployees","LastName is ",352,,,"LastName" 
+"2014-04-29 17:25:57.297","CompanyEmployees","FirstName is ",352,,,"FirstName" 
+"2014-04-29 17:25:57.297","CompanyEmployees","LastName is ",352,,,"LastName" 
+"2014-04-29 17:25:57.297","CompanyEmployees","LastName is ",352,,,"LastName" 
+"2014-04-14 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-14 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",136,,,"FileOpen" 
+"2014-04-14 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-14 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",138,,, 
+"2014-04-14 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-14 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",143,,, 
+"2014-04-15 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-15 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",150,,,"FileOpen" 
+"2014-04-15 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-15 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",152,,,"FileOpen" 
+"2014-04-15 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-15 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",154,,, 
+"2014-04-15 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-15 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",156,,, 
+"2014-04-15 17:28:29.830","CompanyEmployees","LastName is ",156,,,"LastName" 
+"2014-04-15 17:25:57.297","CompanyEmployees","FirstName is ",156,,,"FirstName" 
+"2014-04-15 17:25:57.297","CompanyEmployees","LastName is ",156,,,"LastName" 
+"2014-04-15 17:25:57.297","CompanyEmployees","LastName is ",156,,,"LastName" 
+"2014-04-15 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-15 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",162,,, 
+"2014-04-18 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-18 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",164,,,"FileOpen" 
+"2014-04-18 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-18 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",166,,,"FileOpen" 
+"2014-04-18 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-18 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",168,,, 
+"2014-04-18 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-18 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",173,,, 
+"2014-04-19 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-19 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",172,,,"FileOpen" 
+"2014-04-19 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-19 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",174,,,"FileOpen" 
+"2014-04-19 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-19 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",176,,, 
+"2014-04-19 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-19 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",178,,, 
+"2014-04-19 17:28:29.830","CompanyEmployees","LastName is ",178,,,"LastName" 
+"2014-04-19 17:25:57.297","CompanyEmployees","FirstName is ",178,,,"FirstName" 
+"2014-04-19 17:25:57.297","CompanyEmployees","LastName is ",178,,,"LastName" 
+"2014-04-19 17:25:57.297","CompanyEmployees","LastName is ",178,,,"LastName" 
+"2014-04-19 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-19 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",184,,, 
+"2014-04-18 17:28:29.830","CompanyEmployees","LastName is ",184,,,"LastName" 
+"2014-04-18 17:25:57.297","CompanyEmployees","FirstName is ",184,,,"FirstName" 
+"2014-04-18 17:25:57.297","CompanyEmployees","LastName is ",184,,,"LastName" 
+"2014-04-18 17:25:57.297","CompanyEmployees","LastName is ",184,,,"LastName" 
+"2014-04-18 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-18 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",190,,, 
+"2014-04-20 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-20 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",192,,,"FileOpen" 
+"2014-04-20 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-20 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",194,,,"FileOpen" 
+"2014-04-20 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-20 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",196,,, 
+"2014-04-20 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-20 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",198,,, 
+"2014-04-21 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-21 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",200,,,"FileOpen" 
+"2014-04-21 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-21 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",202,,,"FileOpen" 
+"2014-04-21 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-21 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",204,,, 
+"2014-04-21 17:27:21.897","CompanyEmployees","ProcessStart",,,, 
+"2014-04-21 17:27:22.470","CompanyEmployees","ProcessCompletion-Success",206,,, 
+"2014-04-21 17:28:29.830","CompanyEmployees","LastName is ",206,,,"LastName" 
+"2014-04-21 17:25:57.297","CompanyEmployees","FirstName is ",206,,,"FirstName" 
+"2014-04-21 17:25:57.297","CompanyEmployees","LastName is ",206,,,"LastName" 
+"2014-04-21 17:25:57.297","CompanyEmployees","LastName is ",206,,,"LastName" 
+"2014-04-21 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-21 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",212,,, 
+"2014-04-24 17:34:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-24 17:34:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",215,,,"FileOpen" 
+"2014-04-24 17:24:42.223","CompanyEmployees","ProcessStart",,,, 
+"2014-04-24 17:24:42.270","CompanyEmployees","ProcessCompletion-ErrorOnFileOpen",217,,,"FileOpen" 
+"2014-04-24 17:25:56.973","CompanyEmployees","ProcessStart",,,, 
+"2014-04-24 17:25:57.510","CompanyEmployees","ProcessCompletion-Success",218,,, 
+"2014-04-29 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-29 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",145,,, 
+"2014-04-14 17:28:29.830","CompanyEmployees","LastName is ",145,,,"LastName" 
+"2014-04-14 17:25:57.297","CompanyEmployees","FirstName is ",138,,,"FirstName" 
+"2014-04-14 17:25:57.297","CompanyEmployees","LastName is ",138,,,"LastName" 
+"2014-04-14 17:25:57.297","CompanyEmployees","LastName is ",138,,,"LastName" 
+"2014-04-14 17:28:29.510","CompanyEmployees","ProcessStart",,,, 
+"2014-04-14 17:28:29.980","CompanyEmployees","ProcessCompletion-Success",145,,, 

@@ -1,0 +1,113 @@
+"ProcessId","Process","Step","StartTime","StopTime","CompletionStatus","SourceRecords","ErrorRecord"
+136,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-14 17:24:42.270","2014-04-14 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+138,"CompanyEmployees","FirstName is NULL","2014-04-14 17:25:57.297","2014-04-14 17:25:57.297","ProcessCompletion-Success",25,1
+138,"CompanyEmployees","LastName is NULL","2014-04-14 17:25:57.297","2014-04-14 17:25:57.297","ProcessCompletion-Success",25,2
+138,"CompanyEmployees","ProcessCompletion-Success","2014-04-14 17:25:57.510","2014-04-14 17:25:57.510","ProcessCompletion-Success",25,1
+143,"CompanyEmployees","ProcessCompletion-Success","2014-04-14 17:27:22.470","2014-04-14 17:27:22.470","ProcessCompletion-Success",25,1
+145,"CompanyEmployees","LastName is NULL","2014-04-14 17:28:29.830","2014-04-14 17:28:29.830","ProcessCompletion-Success",25,1
+145,"CompanyEmployees","ProcessCompletion-Success","2014-04-14 17:28:29.980","2014-04-29 17:28:29.980","ProcessCompletion-Success",25,2
+148,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-14 17:34:42.270","2014-04-14 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+150,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-15 17:34:42.270","2014-04-15 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+152,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-15 17:24:42.270","2014-04-15 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+154,"CompanyEmployees","ProcessCompletion-Success","2014-04-15 17:25:57.510","2014-04-15 17:25:57.510","ProcessCompletion-Success",25,1
+156,"CompanyEmployees","FirstName is NULL","2014-04-15 17:25:57.297","2014-04-15 17:25:57.297","ProcessCompletion-Success",25,1
+156,"CompanyEmployees","LastName is NULL","2014-04-15 17:25:57.297","2014-04-15 17:28:29.830","ProcessCompletion-Success",25,3
+156,"CompanyEmployees","ProcessCompletion-Success","2014-04-15 17:27:22.470","2014-04-15 17:27:22.470","ProcessCompletion-Success",25,1
+162,"CompanyEmployees","ProcessCompletion-Success","2014-04-15 17:28:29.980","2014-04-15 17:28:29.980","ProcessCompletion-Success",25,1
+164,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-18 17:34:42.270","2014-04-18 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+166,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-18 17:24:42.270","2014-04-18 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+168,"CompanyEmployees","ProcessCompletion-Success","2014-04-18 17:25:57.510","2014-04-18 17:25:57.510","ProcessCompletion-Success",25,1
+172,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-19 17:34:42.270","2014-04-19 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+173,"CompanyEmployees","ProcessCompletion-Success","2014-04-18 17:27:22.470","2014-04-18 17:27:22.470","ProcessCompletion-Success",25,1
+174,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-19 17:24:42.270","2014-04-19 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+176,"CompanyEmployees","ProcessCompletion-Success","2014-04-19 17:25:57.510","2014-04-19 17:25:57.510","ProcessCompletion-Success",25,1
+178,"CompanyEmployees","FirstName is NULL","2014-04-19 17:25:57.297","2014-04-19 17:25:57.297","ProcessCompletion-Success",25,1
+178,"CompanyEmployees","LastName is NULL","2014-04-19 17:25:57.297","2014-04-19 17:28:29.830","ProcessCompletion-Success",25,3
+178,"CompanyEmployees","ProcessCompletion-Success","2014-04-19 17:27:22.470","2014-04-19 17:27:22.470","ProcessCompletion-Success",25,1
+184,"CompanyEmployees","FirstName is NULL","2014-04-18 17:25:57.297","2014-04-18 17:25:57.297","ProcessCompletion-Success",25,1
+184,"CompanyEmployees","LastName is NULL","2014-04-18 17:25:57.297","2014-04-18 17:28:29.830","ProcessCompletion-Success",25,3
+184,"CompanyEmployees","ProcessCompletion-Success","2014-04-19 17:28:29.980","2014-04-19 17:28:29.980","ProcessCompletion-Success",25,1
+190,"CompanyEmployees","ProcessCompletion-Success","2014-04-18 17:28:29.980","2014-04-18 17:28:29.980","ProcessCompletion-Success",25,1
+192,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-20 17:34:42.270","2014-04-20 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+194,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-20 17:24:42.270","2014-04-20 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+196,"CompanyEmployees","ProcessCompletion-Success","2014-04-20 17:25:57.510","2014-04-20 17:25:57.510","ProcessCompletion-Success",25,1
+198,"CompanyEmployees","ProcessCompletion-Success","2014-04-20 17:27:22.470","2014-04-20 17:27:22.470","ProcessCompletion-Success",25,1
+200,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-21 17:34:42.270","2014-04-21 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+202,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-21 17:24:42.270","2014-04-21 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+204,"CompanyEmployees","ProcessCompletion-Success","2014-04-21 17:25:57.510","2014-04-21 17:25:57.510","ProcessCompletion-Success",25,1
+206,"CompanyEmployees","FirstName is NULL","2014-04-21 17:25:57.297","2014-04-21 17:25:57.297","ProcessCompletion-Success",25,1
+206,"CompanyEmployees","LastName is NULL","2014-04-21 17:25:57.297","2014-04-21 17:28:29.830","ProcessCompletion-Success",25,3
+206,"CompanyEmployees","ProcessCompletion-Success","2014-04-21 17:27:22.470","2014-04-21 17:27:22.470","ProcessCompletion-Success",25,1
+212,"CompanyEmployees","ProcessCompletion-Success","2014-04-21 17:28:29.980","2014-04-21 17:28:29.980","ProcessCompletion-Success",25,1
+215,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-24 17:34:42.270","2014-04-24 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+217,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-24 17:24:42.270","2014-04-24 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+218,"CompanyEmployees","ProcessCompletion-Success","2014-04-24 17:25:57.510","2014-04-24 17:25:57.510","ProcessCompletion-Success",25,1
+220,"CompanyEmployees","ProcessCompletion-Success","2014-04-24 17:27:22.470","2014-04-24 17:27:22.470","ProcessCompletion-Success",25,1
+222,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-25 17:34:42.270","2014-04-25 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+224,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-25 17:24:42.270","2014-04-25 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+226,"CompanyEmployees","ProcessCompletion-Success","2014-04-25 17:25:57.510","2014-04-25 17:25:57.510","ProcessCompletion-Success",25,1
+228,"CompanyEmployees","FirstName is NULL","2014-04-25 17:25:57.297","2014-04-25 17:25:57.297","ProcessCompletion-Success",25,1
+228,"CompanyEmployees","LastName is NULL","2014-04-25 17:25:57.297","2014-04-25 17:28:29.830","ProcessCompletion-Success",25,3
+228,"CompanyEmployees","ProcessCompletion-Success","2014-04-25 17:27:22.470","2014-04-25 17:27:22.470","ProcessCompletion-Success",25,1
+234,"CompanyEmployees","FirstName is NULL","2014-04-24 17:25:57.297","2014-04-24 17:25:57.297","ProcessCompletion-Success",25,1
+234,"CompanyEmployees","LastName is NULL","2014-04-24 17:25:57.297","2014-04-24 17:28:29.830","ProcessCompletion-Success",25,3
+234,"CompanyEmployees","ProcessCompletion-Success","2014-04-25 17:28:29.980","2014-04-25 17:28:29.980","ProcessCompletion-Success",25,1
+240,"CompanyEmployees","FirstName is NULL","2014-04-20 17:25:57.297","2014-04-20 17:25:57.297","ProcessCompletion-Success",25,1
+240,"CompanyEmployees","LastName is NULL","2014-04-20 17:25:57.297","2014-04-20 17:28:29.830","ProcessCompletion-Success",25,3
+240,"CompanyEmployees","ProcessCompletion-Success","2014-04-24 17:28:29.980","2014-04-24 17:28:29.980","ProcessCompletion-Success",25,1
+246,"CompanyEmployees","ProcessCompletion-Success","2014-04-20 17:28:29.980","2014-04-20 17:28:29.980","ProcessCompletion-Success",25,1
+248,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-29 17:34:42.270","2014-04-29 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+250,"CompanyEmployees","ProcessCompletion-Success","2014-05-09 17:27:22.470","2014-05-09 17:27:22.470","ProcessCompletion-Success",25,1
+252,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-10 17:34:42.270","2014-05-10 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+254,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-10 17:24:42.270","2014-05-10 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+256,"CompanyEmployees","ProcessCompletion-Success","2014-05-10 17:25:57.510","2014-05-10 17:25:57.510","ProcessCompletion-Success",25,1
+258,"CompanyEmployees","FirstName is NULL","2014-05-10 17:25:57.297","2014-05-10 17:25:57.297","ProcessCompletion-Success",25,1
+258,"CompanyEmployees","LastName is NULL","2014-05-10 17:25:57.297","2014-05-10 17:28:29.830","ProcessCompletion-Success",25,3
+258,"CompanyEmployees","ProcessCompletion-Success","2014-05-10 17:27:22.470","2014-05-10 17:27:22.470","ProcessCompletion-Success",25,1
+264,"CompanyEmployees","FirstName is NULL","2014-05-09 17:25:57.297","2014-05-09 17:25:57.297","ProcessCompletion-Success",25,1
+264,"CompanyEmployees","LastName is NULL","2014-05-09 17:25:57.297","2014-05-09 17:28:29.830","ProcessCompletion-Success",25,3
+264,"CompanyEmployees","ProcessCompletion-Success","2014-05-10 17:28:29.980","2014-05-10 17:28:29.980","ProcessCompletion-Success",25,1
+270,"CompanyEmployees","FirstName is NULL","2014-05-05 17:25:57.297","2014-05-05 17:25:57.297","ProcessCompletion-Success",25,1
+270,"CompanyEmployees","LastName is NULL","2014-05-05 17:25:57.297","2014-05-05 17:28:29.830","ProcessCompletion-Success",25,3
+270,"CompanyEmployees","ProcessCompletion-Success","2014-05-09 17:28:29.980","2014-05-09 17:28:29.980","ProcessCompletion-Success",25,1
+276,"CompanyEmployees","ProcessCompletion-Success","2014-05-05 17:28:29.980","2014-05-05 17:28:29.980","ProcessCompletion-Success",25,1
+278,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-29 17:24:42.270","2014-04-29 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+280,"CompanyEmployees","ProcessCompletion-Success","2014-04-29 17:25:57.510","2014-04-29 17:25:57.510","ProcessCompletion-Success",25,1
+282,"CompanyEmployees","ProcessCompletion-Success","2014-04-29 17:27:22.470","2014-04-29 17:27:22.470","ProcessCompletion-Success",25,1
+284,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-30 17:34:42.270","2014-04-30 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+286,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-04-30 17:24:42.270","2014-04-30 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+288,"CompanyEmployees","ProcessCompletion-Success","2014-04-30 17:25:57.510","2014-04-30 17:25:57.510","ProcessCompletion-Success",25,1
+290,"CompanyEmployees","FirstName is NULL","2014-04-30 17:25:57.297","2014-04-30 17:25:57.297","ProcessCompletion-Success",25,1
+290,"CompanyEmployees","LastName is NULL","2014-04-30 17:25:57.297","2014-04-30 17:28:29.830","ProcessCompletion-Success",25,3
+290,"CompanyEmployees","ProcessCompletion-Success","2014-04-30 17:27:22.470","2014-04-30 17:27:22.470","ProcessCompletion-Success",25,1
+296,"CompanyEmployees","ProcessCompletion-Success","2014-04-30 17:28:29.980","2014-04-30 17:28:29.980","ProcessCompletion-Success",25,1
+298,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-03 17:34:42.270","2014-05-03 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+300,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-03 17:24:42.270","2014-05-03 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+302,"CompanyEmployees","ProcessCompletion-Success","2014-05-03 17:25:57.510","2014-05-03 17:25:57.510","ProcessCompletion-Success",25,1
+304,"CompanyEmployees","ProcessCompletion-Success","2014-05-03 17:27:22.470","2014-05-03 17:27:22.470","ProcessCompletion-Success",25,1
+306,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-04 17:34:42.270","2014-05-04 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+308,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-04 17:24:42.270","2014-05-04 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+310,"CompanyEmployees","ProcessCompletion-Success","2014-05-04 17:25:57.510","2014-05-04 17:25:57.510","ProcessCompletion-Success",25,1
+312,"CompanyEmployees","FirstName is NULL","2014-05-04 17:25:57.297","2014-05-04 17:25:57.297","ProcessCompletion-Success",25,1
+312,"CompanyEmployees","LastName is NULL","2014-05-04 17:25:57.297","2014-05-04 17:28:29.830","ProcessCompletion-Success",25,3
+312,"CompanyEmployees","ProcessCompletion-Success","2014-05-04 17:27:22.470","2014-05-04 17:27:22.470","ProcessCompletion-Success",25,1
+318,"CompanyEmployees","FirstName is NULL","2014-05-03 17:25:57.297","2014-05-03 17:25:57.297","ProcessCompletion-Success",25,1
+318,"CompanyEmployees","LastName is NULL","2014-05-03 17:25:57.297","2014-05-03 17:28:29.830","ProcessCompletion-Success",25,3
+318,"CompanyEmployees","ProcessCompletion-Success","2014-05-04 17:28:29.980","2014-05-04 17:28:29.980","ProcessCompletion-Success",25,1
+324,"CompanyEmployees","ProcessCompletion-Success","2014-05-03 17:28:29.980","2014-05-03 17:28:29.980","ProcessCompletion-Success",25,1
+327,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-05 17:34:42.270","2014-05-05 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+328,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-05 17:24:42.270","2014-05-05 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+330,"CompanyEmployees","ProcessCompletion-Success","2014-05-05 17:25:57.510","2014-05-05 17:25:57.510","ProcessCompletion-Success",25,1
+332,"CompanyEmployees","ProcessCompletion-Success","2014-05-05 17:27:22.470","2014-05-05 17:27:22.470","ProcessCompletion-Success",25,1
+334,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-06 17:34:42.270","2014-05-06 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+336,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-06 17:24:42.270","2014-05-06 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+338,"CompanyEmployees","ProcessCompletion-Success","2014-05-06 17:25:57.510","2014-05-06 17:25:57.510","ProcessCompletion-Success",25,1
+340,"CompanyEmployees","FirstName is NULL","2014-05-06 17:25:57.297","2014-05-06 17:25:57.297","ProcessCompletion-Success",25,1
+340,"CompanyEmployees","LastName is NULL","2014-05-06 17:25:57.297","2014-05-06 17:28:29.830","ProcessCompletion-Success",25,3
+340,"CompanyEmployees","ProcessCompletion-Success","2014-05-06 17:27:22.470","2014-05-06 17:27:22.470","ProcessCompletion-Success",25,1
+346,"CompanyEmployees","ProcessCompletion-Success","2014-05-06 17:28:29.980","2014-05-06 17:28:29.980","ProcessCompletion-Success",25,1
+348,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-09 17:34:42.270","2014-05-09 17:34:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+350,"CompanyEmployees","ProcessCompletion-ErrorOnFileOpen","2014-05-09 17:24:42.270","2014-05-09 17:24:42.270","ProcessCompletion-ErrorOnFileOpen",25,1
+352,"CompanyEmployees","FirstName is NULL","2014-04-29 17:25:57.297","2014-04-29 17:25:57.297","ProcessCompletion-Success",25,1
+352,"CompanyEmployees","LastName is NULL","2014-04-29 17:25:57.297","2014-04-29 17:28:29.830","ProcessCompletion-Success",25,3
+352,"CompanyEmployees","ProcessCompletion-Success","2014-05-09 17:25:57.510","2014-05-09 17:25:57.510","ProcessCompletion-Success",25,1
