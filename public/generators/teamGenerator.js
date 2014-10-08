@@ -13,7 +13,7 @@ define([
       this.ratingWeightArray = [1, 2, 5, 7, 9, 13, 13, 11, 9, 5]; 
 
       // Setup Array for rating generation
-      var totalweight=eval(ratingWeightArray.join("+"));
+      var totalweight=eval(this.ratingWeightArray.join("+"));
       this.weightedRatingsArray = new Array();
       var currentRating=0;
       while (currentRating<ratingArray.length){ 
