@@ -4,29 +4,26 @@ define([
   'backbone',
   'text!../../templates/navbar.html',
   'text!../../templates/homePage.html',
-  'text!../../templates/link1.html'
-], function($, _, Backbone, navbarTemplate, homepageTemplate, link1Template){
+  'text!../../views/playGameView.js'
+], function($, _, Backbone, navbarTemplate, homepageTemplate, playGameView){
   var ProjectListView = Backbone.View.extend({
     el: $('#pageContent'),
+    PlayGameView: playGameView,
     events: {
     	'click #home': 'homepage',
-    	'click #link1': 'link1',
+    	'click #playGame': 'playGameTab',
     	'click .btn': 'gfy'
     },
     initialize: function(){
     	
     },
-    gfy: function(){
-		$(this.$el.find('.btn')[1]).text('Go Fuck Yourself');
-		$(this.$el.find('.btn')[1]).attr('class', 'btn btn-success');
-    },
     homepage: function() {
     	 var data = {};
     	  this.$el.find('#content').html(_.template( homepageTemplate, data));
     },
-    link1: function(){
-    	 var data = {};
-    	this.$el.find('#content').html(_.template( link1Template, data));
+    playGameTab: function(){
+    	 var playGameView = new PlayGameView();
+       this.$el.find('#content').html(playGameView.render());
     },
     render: function(){
       // Using Underscore we can compile our template with data
