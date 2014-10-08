@@ -9,7 +9,6 @@ define([
     events: {
     	'click #home': 'homepage',
     	'click #playGameTab': 'playGameTab',
-    	'click .btn': 'gfy'
     },
     initialize: function(){
     	
