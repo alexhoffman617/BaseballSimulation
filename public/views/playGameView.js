@@ -13,8 +13,8 @@ define([
     	
     },
     playGame: function(){
-		$(this.$el.find('#playGameButton')[1]).text('Game Played');
-		$(this.$el.find('#playGameButton')[1]).attr('class', 'btn btn-success');
+		this.$el.find('#playGameButton').text('Game Played')
+    this.$el.find('#playGameButton').attr('class', 'btn btn-success');
     },
     render: function(){
       this.tmpl = _.template( template, {} );
