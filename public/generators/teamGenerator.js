@@ -24,7 +24,7 @@ define([
       }
     },
     getRating: function(){
-      return this.weightedRatingsArray[Math.floor(Math.random() * weightedRatingsArray.length)] * 10 + Math.floor(Math.random() * 10)
+      return this.weightedRatingsArray[Math.floor(Math.random() * this.weightedRatingsArray.length)] * 10 + Math.floor(Math.random() * 10)
     },
     getPosition: function(){
       var arrayElementPosition = Math.floor(Math.random() * this.positionArray.length);
