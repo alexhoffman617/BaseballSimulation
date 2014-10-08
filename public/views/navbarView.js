@@ -2,8 +2,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'text!../../templates/navbar.html',
+  'text!../../templates/homePage.html',
   '../../views/playGameView.js'
-], function($, _, Backbone, PlayGameView){
+], function($, _, Backbone, navbarTemplate, homepageTemplate, PlayGameView){
   var ProjectListView = Backbone.View.extend({
     el: $('#pageContent'),
     events: {
