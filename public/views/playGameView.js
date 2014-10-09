@@ -102,7 +102,7 @@ define([
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
-                    runs.Value = this.awayRuns + 2;
+                    runs.Value = runs.Value + 2;
                   }
                 }
 
@@ -345,7 +345,7 @@ define([
         this.halfInning(this.awayRuns, "Top");
         this.halfInning(this.homeRuns, "Bottom");
 
-        console.log("\n" + "After top " + this.currentInning + " the score is Home " + this.homeRuns.Value + "," + " Away " + this.awayRuns.Value + "\n")
+        console.log("\n" + "After" + this.currentInning + " the score is Home " + this.homeRuns.Value + "," + " Away " + this.awayRuns.Value + "\n")
       }
 
 		  this.$el.find('#playGameButton').text('Game Played')
