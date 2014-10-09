@@ -347,7 +347,7 @@ define([
 
     for(this.currentInning = 1; this.currentInning - 1 < innings; this.currentInning++){
         this.playInning();
-        console.log("\n" + "After" + this.currentInning + " the score is Home " + this.homeRuns.Value + "," + " Away " + this.awayRuns.Value + "\n")
+        console.log("\n" + "After " + this.currentInning + " the score is: Home " + this.homeRuns.Value + "," + " Away " + this.awayRuns.Value + "\n")
       }
 
 		  this.$el.find('#playGameButton').text('Game Played')
