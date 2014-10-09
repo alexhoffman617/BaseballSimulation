@@ -20,12 +20,12 @@ define([
     var awayHits = 0;
     var awayRuns = 0;
 
-    for(var currentInnings = 1; currentInnings - 1 < innings; currentInnings++){
+    for(var currentInning = 1; currentInning - 1 < innings; currentInning++){
         awayOuts = 0;
         firstBase = 0;
         secondBase = 0;
         thirdBase = 0;
-        console.log ("Top " + currentInnings + "\n");
+        console.log ("Top " + currentInning + "\n");
 
         while (awayOuts < 3){
             // determine outcome of PA
