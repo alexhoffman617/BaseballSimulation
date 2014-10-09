@@ -49,7 +49,7 @@ define([
         while (outs < 3){
             // Get Batter
             var batterNumber = team.AtBat % 9;
-            console.log(team.Lineup[batterNumber].Name + " is up to bat");
+            console.log(team.Lineup[batterNumber - 1].Name + " is up to bat");
 
             // determine outcome of PA
             var outcome = this.atBat();

@@ -11,6 +11,11 @@
     							<th>Name</th>
     							<th>Position</th>		
     							<th>Rating</th>
+    							<th>PA</th>
+    							<th>H</th>
+    							<th>HR</th>
+    							<th>RBI</th>
+    							<th>BB</th>    							
   							</tr>
   							<% for(i = 0; i < homeTeam.Lineup.length; i++){ %>
 							<tr>
@@ -18,6 +23,11 @@
 								<td><%= homeTeam.Lineup[i].Name %></td>
 								<td><%= homeTeam.Lineup[i].Position %></td>
 								<td><%= homeTeam.Lineup[i].Rating %></td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
 							</tr>
 							<% } %>
 						</table>
