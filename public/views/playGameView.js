@@ -21,19 +21,19 @@ define([
     var awayRuns = 0;
 
     for(var currentInnings = 1; currentInnings - 1 < innings; currentInnings++){
-        outs = 0;
+        awayOuts = 0;
         firstBase = 0;
         secondBase = 0;
         thirdBase = 0;
         console.log ("Top " + currentInnings + "\n");
 
-        while (a_outs < 3){
+        while (awayOuts < 3){
             // determine outcome of PA
             var roll = Math.random();
             var outcome;
             if(roll <= 0.683289){
                 outcome = "out";
-                outs = awayOuts + 1;
+                awayOuts = awayOuts + 1;
               }
             else if(roll > 0.683289 && roll <= 0.837822409){                
                 outcome = "single";
