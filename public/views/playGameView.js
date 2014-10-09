@@ -39,29 +39,19 @@ define([
       console.log(outcome);
       return outcome;
     },
-    halfInning: function(){
+    halfInning: function(runs, side){
+        var outs = 0;
+        var firstBase = 0;
+        var secondBase = 0;
+        var thirdBase = 0;
+        console.log (side + " " + this.currentInning + "\n");
 
-    },
-    playGame: function(){
-    var innings = 9;
-    var homeHits = 0;
-    this.homeRuns = 0;
-    var awayHits = 0;
-    this.awayRuns = 0;
-
-    for(var currentInning = 1; currentInning - 1 < innings; currentInning++){
-        awayOuts = 0;
-        firstBase = 0;
-        secondBase = 0;
-        thirdBase = 0;
-        console.log ("Top " + currentInning + "\n");
-
-        while (awayOuts < 3){
+        while (outs < 3){
             // determine outcome of PA
             var outcome = this.atBat();
 
             if(outcome == "out"){
-            awayOuts = awayOuts + 1;
+            outs = outs + 1;
             }
 
             // bases empty
@@ -76,7 +66,7 @@ define([
                     thirdBase = 1;
                   }
                 else if(outcome == "homerun"){
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value =  runs.Value + 1;
                   }
               }
 
@@ -102,17 +92,17 @@ define([
                         thirdBase = 1;
                       }
                     else{
-                        this.awayRuns = this.awayRuns + 1;
+                        runs.Value = runs.Value + 1;
                       }
                   }
                 else if(outcome == "triple"){
                     firstBase = 0;
                     thirdBase = 1;
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value = runs.Value + 1;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
-                    this.awayRuns = this.awayRuns + 2;
+                    runs.Value = this.awayRuns + 2;
                   }
                 }
 
@@ -124,27 +114,27 @@ define([
                 else if(outcome == "single"){
                     firstBase = 1;
                     secondBase = 0;
-                    bsr = Math.random();
+                    var bsr = Math.random();
 
                     if (bsr <= 0.42){
                         thirdBase = 1;
                       }
                     else{
-                        this.awayRuns = this.awayRuns + 1;
+                        runs.Value = runs.Value + 1;
                       }
                   }
                 else if(outcome == "double"){
                     secondBase = 1;
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value = runs.Value + 1;
                   }
                 else if(outcome == "triple"){
                     secondBase = 0;
                     thirdBase = 1;
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value = runs.Value + 1;
                   }
                 else if(outcome == "homerun"){
                     secondBase = 0;
-                    this.awayRuns = this.awayRuns + 2;
+                    runs.Value = runs.Value + 2;
                   }
               }
 
@@ -156,20 +146,20 @@ define([
                 else if(outcome == "single"){
                     firstBase = 1;
                     thirdBase = 0;
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value = runs.Value + 1;
                   }
                 else if(outcome == "double"){
                     secondBase = 1;
                     thirdBase = 0;
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value = runs.Value + 1;
                   }
                 else if(outcome == "triple"){
                     thirdBase = 1;
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value = runs.Value + 1;
                   }
                 else if(outcome == "homerun"){
                     thirdBase = 0;
-                    this.awayRuns = this.awayRuns + 2;
+                    runs.Value = runs.Value + 2;
                   }
               }
 
@@ -184,7 +174,7 @@ define([
                         thirdBase = 1;
                       }
                     else{
-                        this.awayRuns = this.awayRuns + 1;
+                        runs.Value = runs.Value + 1;
                       }
                     var bsr2 = Math.random();
                     if (bsr > 0.42 && bsr2 > 0.72){
@@ -197,22 +187,22 @@ define([
                     var bsr = Math.random();
                     if (bsr <= 0.38){
                         thirdBase = 1;
-                        this.awayRuns = this.awayRuns + 1;
+                        runs.Value = runs.Value + 1;
                       }
                     else{
-                        this.awayRuns = this.awayRuns + 2;
+                        runs.Value = runs.Value + 2;
                     }
                   }
                 else if(outcome == "triple"){
                     firstBase = 0;
                     secondBase = 0;
                     thirdBase = 1;
-                    this.awayRuns = this.awayRuns + 2;
+                    runs.Value = runs.Value + 2;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     secondBase = 0;
-                    this.awayRuns = this.awayRuns + 3;
+                    runs.Value = runs.Value + 3;
                   }
               }
 
@@ -230,7 +220,7 @@ define([
                     else{
                         thirdBase = 1;
                       }
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value = runs.Value + 1;
                   }
                 else if(outcome == "double"){
                     firstBase = 0;
@@ -238,22 +228,22 @@ define([
                     var bsr = Math.random();
                     if (bsr <= 0.38){
                         thirdBase = 1;
-                        this.awayRuns = this.awayRuns + 1;
+                        runs.Value = runs.Value + 1;
                       }
                     else{
                         thirdBase = 0;
-                        this.awayRuns = this.awayRuns + 2;
+                        runs.Value = runs.Value + 2;
                       }
                   }
                 else if(outcome == "triple"){
                     firstBase = 0;
                     thirdBase = 1;
-                    this.awayRuns = this.awayRuns + 2;
+                    runs.Value = runs.Value + 2;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     thirdBase = 0;
-                    this.awayRuns = this.awayRuns + 3;
+                    runs.Value = runs.Value + 3;
                   }
               }
 
@@ -268,42 +258,42 @@ define([
                     var bsr = Math.random();
                     if (bsr <= 0.42){
                         thirdBase = 1;
-                        this.awayRuns = this.awayRuns + 1;
+                        runs.Value = runs.Value + 1;
                       }
                     else{
                         thirdBase = 0;
-                        this.awayRuns = this.awayRuns + 2;
+                        runs.Value = runs.Value + 2;
                       }
                   }
                 else if(outcome == "double"){
                     secondBase = 1;
                     thirdBase = 0;
-                    this.awayRuns = this.awayRuns + 2;
+                    runs.Value = runs.Value + 2;
                   }
                 else if(outcome == "triple"){
                     secondBase = 0;
                     thirdBase = 1;
-                    this.awayRuns = this.awayRuns + 2;
+                    runs.Value = runs.Value + 2;
                   }
                 else if(outcome == "homerun"){
                     secondBase = 0;
                     thirdBase = 0;
-                    this.awayRuns = this.awayRuns + 3;
+                    runs.Value = runs.Value + 3;
                   }
               }
 
             // bases loaded
             else if(firstBase == 1 && secondBase == 1 && thirdBase == 1){
                 if (outcome == "walk"){
-                    this.awayRuns = this.awayRuns + 1;
+                    runs.Value = runs.Value + 1;
                   }
                 else if(outcome == "single"){
                     var bsr = Math.random();
                     if (bsr <= 0.42){
-                        this.awayRuns = this.awayRuns + 1
+                        runs.Value = runs.Value + 1
                       }
                     else{
-                        this.awayRuns = this.awayRuns + 2
+                        runs.Value = runs.Value + 2
                       }
                     var bsr_2 = Math.random();
                     if (bsr > 0.42 && bsr_2 > 0.72){
@@ -319,34 +309,47 @@ define([
                     var bsr = Math.random();
                     if (bsr <= 0.38){
                         thirdBase = 1;
-                        this.awayRuns = this.awayRuns + 2;
+                        runs.Value = runs.Value + 2;
                       }
                     else{
                         thirdBase = 0;
-                        this.awayRuns = this.awayRuns + 3;
+                        runs.Value = runs.Value + 3;
                       }
                   }
                 else if(outcome == "triple"){
                     firstBase = 0;
                     secondBase = 0;
                     thirdBase = 1;
-                    this.awayRuns = this.awayRuns + 3;
+                    runs.Value = runs.Value + 3;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     secondBase = 0;
                     thirdBase = 0;
-                    print("Grand Slam HR for the away team!");
-                    this.awayRuns = this.awayRuns + 4;
+                    print("Grand Slam HR!");
+                    runs.Value = runs.Value + 4;
                   }
               }
             }
+    },
+    playGame: function(){
+    var innings = 9;
+    var homeHits = 0;
+    this.homeRuns = {};
+    this.homeRuns.Value = 0;
+    var awayHits = 0;
+    this.awayRuns = {};
+    this.awayRuns.Value = 0;
 
-        console.log("\n" + "After top " + currentInning + " the score is Home " + 0 + "," + " Away " + this.awayRuns + "\n")
-          }
+    for(this.currentInning = 1; this.currentInning - 1 < innings; this.currentInning++){
+        this.halfInning(this.awayRuns, "Top");
+        this.halfInning(this.homeRuns, "Bottom");
 
-		this.$el.find('#playGameButton').text('Game Played')
-    this.$el.find('#playGameButton').attr('class', 'btn btn-success');
+        console.log("\n" + "After top " + this.currentInning + " the score is Home " + this.homeRuns + "," + " Away " + this.awayRuns + "\n")
+      }
+
+		  this.$el.find('#playGameButton').text('Game Played')
+      this.$el.find('#playGameButton').attr('class', 'btn btn-success');
     },
     createTeam: function(){
       var team = [];
