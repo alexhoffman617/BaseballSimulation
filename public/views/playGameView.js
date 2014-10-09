@@ -47,6 +47,10 @@ define([
         console.log (side + " " + this.currentInning + "\n");
 
         while (outs < 3){
+            // Get Batter
+            var batterNumber = team.AtBat % 9;
+            console.log(team.Lineup[batterNumber].Name + " is up to bat");
+
             // determine outcome of PA
             var outcome = this.atBat();
             team.AtBat ++;
@@ -339,10 +343,8 @@ define([
     },
     playGame: function(){
     var innings = 9;
-    this.homeBatters = {};
     this.homeTeam.AtBat = 1;
     this.homeTeam.Runs = 0;
-    this.awayBatters = {};
     this.awayTeam.AtBat = 1;
     this.awayTeam.Runs = 0;
 
