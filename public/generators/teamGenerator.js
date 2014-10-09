@@ -44,9 +44,10 @@ define([
     },
     createTeam: function(){
       var numberOfPlayers = 9;
-      this.team = [];
+      this.team = {};
+      this.team.Lineup = [];
       for(var i = 0; i < numberOfPlayers; i++){
-        this.team[i]= this.createPlayer();
+        this.team.Lineup[i]= this.createPlayer();
       }
       return this.team;
     }
