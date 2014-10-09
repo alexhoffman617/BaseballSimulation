@@ -359,6 +359,9 @@ define([
         console.log("\n" + "After " + this.currentInning + " the score is: Home " + this.homeTeam.Runs + "," + " Away " + this.awayTeam.Runs + "\n")
       }
 
+      this.tmpl = _.template( template, { homeTeam: this.homeTeam, awayTeam: this.awayTeam });
+      this.$el.html(this.tmpl);
+      
 		  this.$el.find('#playGameButton').text('Game Played')
       this.$el.find('#playGameButton').attr('class', 'btn btn-success');
     },
