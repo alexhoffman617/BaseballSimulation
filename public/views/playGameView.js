@@ -39,7 +39,7 @@ define([
       console.log(outcome);
       return outcome;
     },
-    halfInning: function(runs, side){
+    halfInning: function(team, side){
         var outs = 0;
         var firstBase = 0;
         var secondBase = 0;
@@ -49,6 +49,7 @@ define([
         while (outs < 3){
             // determine outcome of PA
             var outcome = this.atBat();
+            team.AtBat ++;
 
             if(outcome == "out"){
             outs = outs + 1;
@@ -66,7 +67,7 @@ define([
                     thirdBase = 1;
                   }
                 else if(outcome == "homerun"){
-                    runs.Value =  runs.Value + 1;
+                    team.Runs =  team.Runs + 1;
                   }
               }
 
@@ -92,17 +93,17 @@ define([
                         thirdBase = 1;
                       }
                     else{
-                        runs.Value = runs.Value + 1;
+                        team.Runs = team.Runs + 1;
                       }
                   }
                 else if(outcome == "triple"){
                     firstBase = 0;
                     thirdBase = 1;
-                    runs.Value = runs.Value + 1;
+                    team.Runs = team.Runs + 1;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
-                    runs.Value = runs.Value + 2;
+                    team.Runs = team.Runs + 2;
                   }
                 }
 
@@ -120,21 +121,21 @@ define([
                         thirdBase = 1;
                       }
                     else{
-                        runs.Value = runs.Value + 1;
+                        team.Runs = team.Runs + 1;
                       }
                   }
                 else if(outcome == "double"){
                     secondBase = 1;
-                    runs.Value = runs.Value + 1;
+                    team.Runs = team.Runs + 1;
                   }
                 else if(outcome == "triple"){
                     secondBase = 0;
                     thirdBase = 1;
-                    runs.Value = runs.Value + 1;
+                    team.Runs = team.Runs + 1;
                   }
                 else if(outcome == "homerun"){
                     secondBase = 0;
-                    runs.Value = runs.Value + 2;
+                    team.Runs = team.Runs + 2;
                   }
               }
 
@@ -146,20 +147,20 @@ define([
                 else if(outcome == "single"){
                     firstBase = 1;
                     thirdBase = 0;
-                    runs.Value = runs.Value + 1;
+                    team.Runs = team.Runs + 1;
                   }
                 else if(outcome == "double"){
                     secondBase = 1;
                     thirdBase = 0;
-                    runs.Value = runs.Value + 1;
+                    team.Runs = team.Runs + 1;
                   }
                 else if(outcome == "triple"){
                     thirdBase = 1;
-                    runs.Value = runs.Value + 1;
+                    team.Runs = team.Runs + 1;
                   }
                 else if(outcome == "homerun"){
                     thirdBase = 0;
-                    runs.Value = runs.Value + 2;
+                    team.Runs = team.Runs + 2;
                   }
               }
 
@@ -174,7 +175,7 @@ define([
                         thirdBase = 1;
                       }
                     else{
-                        runs.Value = runs.Value + 1;
+                        team.Runs = team.Runs + 1;
                       }
                     var bsr2 = Math.random();
                     if (bsr > 0.42 && bsr2 > 0.72){
@@ -187,22 +188,22 @@ define([
                     var bsr = Math.random();
                     if (bsr <= 0.38){
                         thirdBase = 1;
-                        runs.Value = runs.Value + 1;
+                        team.Runs = team.Runs + 1;
                       }
                     else{
-                        runs.Value = runs.Value + 2;
+                        team.Runs = team.Runs + 2;
                     }
                   }
                 else if(outcome == "triple"){
                     firstBase = 0;
                     secondBase = 0;
                     thirdBase = 1;
-                    runs.Value = runs.Value + 2;
+                    team.Runs = team.Runs + 2;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     secondBase = 0;
-                    runs.Value = runs.Value + 3;
+                    team.Runs = team.Runs + 3;
                   }
               }
 
@@ -220,7 +221,7 @@ define([
                     else{
                         thirdBase = 1;
                       }
-                    runs.Value = runs.Value + 1;
+                    team.Runs = team.Runs + 1;
                   }
                 else if(outcome == "double"){
                     firstBase = 0;
@@ -228,22 +229,22 @@ define([
                     var bsr = Math.random();
                     if (bsr <= 0.38){
                         thirdBase = 1;
-                        runs.Value = runs.Value + 1;
+                        team.Runs = team.Runs + 1;
                       }
                     else{
                         thirdBase = 0;
-                        runs.Value = runs.Value + 2;
+                        team.Runs = team.Runs + 2;
                       }
                   }
                 else if(outcome == "triple"){
                     firstBase = 0;
                     thirdBase = 1;
-                    runs.Value = runs.Value + 2;
+                    team.Runs = team.Runs + 2;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     thirdBase = 0;
-                    runs.Value = runs.Value + 3;
+                    team.Runs = team.Runs + 3;
                   }
               }
 
@@ -258,42 +259,42 @@ define([
                     var bsr = Math.random();
                     if (bsr <= 0.42){
                         thirdBase = 1;
-                        runs.Value = runs.Value + 1;
+                        team.Runs = team.Runs + 1;
                       }
                     else{
                         thirdBase = 0;
-                        runs.Value = runs.Value + 2;
+                        team.Runs = team.Runs + 2;
                       }
                   }
                 else if(outcome == "double"){
                     secondBase = 1;
                     thirdBase = 0;
-                    runs.Value = runs.Value + 2;
+                    team.Runs = team.Runs + 2;
                   }
                 else if(outcome == "triple"){
                     secondBase = 0;
                     thirdBase = 1;
-                    runs.Value = runs.Value + 2;
+                    team.Runs = team.Runs + 2;
                   }
                 else if(outcome == "homerun"){
                     secondBase = 0;
                     thirdBase = 0;
-                    runs.Value = runs.Value + 3;
+                    team.Runs = team.Runs + 3;
                   }
               }
 
             // bases loaded
             else if(firstBase == 1 && secondBase == 1 && thirdBase == 1){
                 if (outcome == "walk"){
-                    runs.Value = runs.Value + 1;
+                    team.Runs = team.Runs + 1;
                   }
                 else if(outcome == "single"){
                     var bsr = Math.random();
                     if (bsr <= 0.42){
-                        runs.Value = runs.Value + 1
+                        team.Runs = team.Runs + 1
                       }
                     else{
-                        runs.Value = runs.Value + 2
+                        team.Runs = team.Runs + 2
                       }
                     var bsr_2 = Math.random();
                     if (bsr > 0.42 && bsr_2 > 0.72){
@@ -309,45 +310,45 @@ define([
                     var bsr = Math.random();
                     if (bsr <= 0.38){
                         thirdBase = 1;
-                        runs.Value = runs.Value + 2;
+                        team.Runs = team.Runs + 2;
                       }
                     else{
                         thirdBase = 0;
-                        runs.Value = runs.Value + 3;
+                        team.Runs = team.Runs + 3;
                       }
                   }
                 else if(outcome == "triple"){
                     firstBase = 0;
                     secondBase = 0;
                     thirdBase = 1;
-                    runs.Value = runs.Value + 3;
+                    team.Runs = team.Runs + 3;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     secondBase = 0;
                     thirdBase = 0;
                     print("Grand Slam HR!");
-                    runs.Value = runs.Value + 4;
+                    team.Runs = team.Runs + 4;
                   }
               }
             }
     },
     playInning: function(){
-              this.halfInning(this.awayRuns, "Top");
-        this.halfInning(this.homeRuns, "Bottom");
+        this.halfInning(this.awayTeam, "Top");
+        this.halfInning(this.homeTeam, "Bottom");
     },
     playGame: function(){
     var innings = 9;
-    var homeHits = 0;
-    this.homeRuns = {};
-    this.homeRuns.Value = 0;
-    var awayHits = 0;
-    this.awayRuns = {};
-    this.awayRuns.Value = 0;
+    this.homeBatters = {};
+    this.homeTeam.AtBat = 1;
+    this.homeTeam.Runs = 0;
+    this.awayBatters = {};
+    this.awayTeam.AtBat = 1;
+    this.awayTeam.Runs = 0;
 
     for(this.currentInning = 1; this.currentInning - 1 < innings; this.currentInning++){
         this.playInning();
-        console.log("\n" + "After " + this.currentInning + " the score is: Home " + this.homeRuns.Value + "," + " Away " + this.awayRuns.Value + "\n")
+        console.log("\n" + "After " + this.currentInning + " the score is: Home " + this.homeTeam.Runs + "," + " Away " + this.awayTeam.Runs + "\n")
       }
 
 		  this.$el.find('#playGameButton').text('Game Played')
