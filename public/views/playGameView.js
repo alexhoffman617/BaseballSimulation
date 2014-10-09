@@ -55,7 +55,7 @@ define([
 
             // bases empty
             if (firstBase == 0 && secondBase == 0 && thirdBase == 0){
-                if (outcome == "single" or outcome == "walk"){
+                if (outcome == "single" || outcome == "walk"){
                     firstBase = 1;
                   }
                 else if(outcome == "double"){
