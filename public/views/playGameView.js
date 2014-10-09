@@ -13,27 +13,33 @@ define([
     initialize: function(){
     	
     },    
-    atBat: function(){
+    atBat: function(batter){
       var roll = Math.random();
       var outcome;
+      batter.gameStats.PlateAppearances ++;
       if(roll <= 0.683289){
           outcome = "out";
           
         }
       else if(roll > 0.683289 && roll <= 0.837822409){                
           outcome = "single";
+          batter.gameStats.Singles ++;
         }
       else if(roll > 0.837822409 && roll <= 0.92838502){
           outcome = "walk";
+          batter.gameStats.Walks ++;
         }
       else if(roll > 0.92838502 && roll <= 0.972625158){
           outcome = "double";
+          batter.gameStats.Doubles ++;
         }
       else if(roll > 0.972625158 && roll <= 0.977241094){
           outcome = "triple";
+          batter.gameStats.Triples ++;
         }
       else{
           outcome = "homerun";
+          batter.gameStats.HomeRuns ++;
         }
 
       console.log(outcome);
@@ -48,11 +54,11 @@ define([
 
         while (outs < 3){
             // Get Batter
-            var batterNumber = team.AtBat % 9;
-            console.log(team.Lineup[batterNumber - 1].Name + " is up to bat");
+            var batterNumber = (team.AtBat % 9) - 1;
+            console.log(team.Lineup[batterNumber].Name + " is up to bat");
 
             // determine outcome of PA
-            var outcome = this.atBat();
+            var outcome = this.atBat(team.Lineup[batterNumber]);
             team.AtBat ++;
 
             if(outcome == "out"){
