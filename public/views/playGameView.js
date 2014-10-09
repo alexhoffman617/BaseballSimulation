@@ -332,6 +332,10 @@ define([
               }
             }
     },
+    playInning: function(){
+              this.halfInning(this.awayRuns, "Top");
+        this.halfInning(this.homeRuns, "Bottom");
+    },
     playGame: function(){
     var innings = 9;
     var homeHits = 0;
@@ -342,9 +346,7 @@ define([
     this.awayRuns.Value = 0;
 
     for(this.currentInning = 1; this.currentInning - 1 < innings; this.currentInning++){
-        this.halfInning(this.awayRuns, "Top");
-        this.halfInning(this.homeRuns, "Bottom");
-
+        this.playInning();
         console.log("\n" + "After" + this.currentInning + " the score is Home " + this.homeRuns.Value + "," + " Away " + this.awayRuns.Value + "\n")
       }
 
