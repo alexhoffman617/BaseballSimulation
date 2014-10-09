@@ -8,12 +8,14 @@
 						<table id = "homeTeamTable" border="3" width="100%">
   							<tr>
     							<th>Order</th>
+    							<th>Name</th>
     							<th>Position</th>		
     							<th>Rating</th>
   							</tr>
   							<% for(i = 0; i < homeTeam.length; i++){ %>
 							<tr>
 								<td><%= i + 1 %></td>
+								<td><%= awayTeam[i].Name %></td>
 								<td><%= homeTeam[i].Position %></td>
 								<td><%= homeTeam[i].Rating %></td>
 							</tr>
@@ -27,12 +29,14 @@
 						<table id = "awayTeamTable" border="3" width="100%">
   							<tr>
     							<th>Order</th>
+    							<th>Name</th>
     							<th>Position</th>		
     							<th>Rating</th>
   							</tr>
 							<% for(i = 0; i < awayTeam.length; i++){ %>
 							<tr>
 								<td><%= i + 1 %></td>
+								<td><%= awayTeam[i].Name %></td>
 								<td><%= awayTeam[i].Position %></td>
 								<td><%= awayTeam[i].Rating %></td>
 							</tr>

@@ -4,7 +4,7 @@ define([
   'backbone',
   'text!../../templates/playGame.html',
   '../../generators/teamGenerator.js',
-], function($, _, Backbone, template, teamGenerator){
+], function($, _, Backbone, template, TeamGenerator){
   var PlayGameView = Backbone.View.extend({
     el: $('#pageContent'),
     events: {
@@ -26,8 +26,8 @@ define([
       return team
     },
     render: function(){
-      var homeTeamGenerator = new teamGenerator();
-      var awayTeamGenerator = new teamGenerator();
+      var homeTeamGenerator = new TeamGenerator();
+      var awayTeamGenerator = new TeamGenerator();
       this.homeTeam = homeTeamGenerator.createTeam(9);
       this.awayTeam = awayTeamGenerator.createTeam(9);
       this.tmpl = _.template( template, { homeTeam: this.homeTeam, awayTeam: this.awayTeam });

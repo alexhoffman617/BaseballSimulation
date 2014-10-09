@@ -2,15 +2,18 @@ define([
   'jquery',
   'underscore',
   'backbone',
-], function($, _, Backbone){
+    '../../generators/nameGenerator.js',
+], function($, _, Backbone, NameGenerator){
   var TeamGenerator = Backbone.View.extend({
     events: {
     },
     initialize: function(){
 
+      this.nameGenerator = new NameGenerator();
+
     	this.positionArray = ["C", "P", "1B", "2B", "3B", "SS", "LF", "CF", "RF"];
       this.ratingArray =       [0, 1, 2, 3, 4,  5,  6,  7, 8, 9];
-      this.ratingWeightArray = [1, 2, 5, 7, 9, 13, 13, 11, 9, 5]; 
+      this.ratingWeightArray = [1, 1, 1, 3, 4, 10, 12, 10, 8, 4]; 
 
       // Setup Array for rating generation
       var totalweight=eval(this.ratingWeightArray.join("+"));
@@ -34,6 +37,7 @@ define([
     },
     createPlayer: function(){
       player = {};
+      player.Name = nameGenerator.getFullName();
       player.Rating = this.getRating();
       player.Position = this.getPosition();
       return player;
