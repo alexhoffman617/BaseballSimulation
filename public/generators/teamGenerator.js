@@ -37,7 +37,7 @@ define([
     },
     createPlayer: function(){
       player = {};
-      player.Name = nameGenerator.getFullName();
+      player.Name = this.nameGenerator.getFullName();
       player.Rating = this.getRating();
       player.Position = this.getPosition();
       return player;
