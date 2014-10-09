@@ -40,6 +40,16 @@ define([
       player.Name = this.nameGenerator.getFullName();
       player.Rating = this.getRating();
       player.Position = this.getPosition();
+      player.gameStats = {};
+      player.gameStats.PlateAppearances = 0;
+      player.gameStats.Walks = 0;
+      player.gameStats.Singles = 0;
+      player.gameStats.Doubles = 0;
+      player.gameStats.Triples = 0;
+      player.gameStats.HomeRuns = 0;
+      player.gameStats.RunsBattedIn = 0;
+      player.gameStats.Runs = 0;
+      player.gameStats.StrikeOuts = 0;
       return player;
     },
     createTeam: function(){

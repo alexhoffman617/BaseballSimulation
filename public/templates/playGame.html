@@ -23,11 +23,11 @@
 								<td><%= homeTeam.Lineup[i].Name %></td>
 								<td><%= homeTeam.Lineup[i].Position %></td>
 								<td><%= homeTeam.Lineup[i].Rating %></td>
-								<td>0</td>
-								<td>0</td>
-								<td>0</td>
-								<td>0</td>
-								<td>0</td>
+								<td><%= homeTeam.Lineup[i].GameStats.PlateAppearances %></td>
+								<td><%= homeTeam.Lineup[i].GameStats.Singles + homeTeam.Lineup[i].GameStats.Doubles + homeTeam.Lineup[i].GameStats.Triples + homeTeam.Lineup[i].GameStats.HomeRuns %></td>
+								<td><%= homeTeam.Lineup[i].GameStats.HomeRuns %> </td>
+								<td><%= homeTeam.Lineup[i].GameStats.RunsBattedIn %></td>
+								<td><%= homeTeam.Lineup[i].GameStats.Walks %></td>
 							</tr>
 							<% } %>
 						</table>
@@ -42,6 +42,11 @@
     							<th>Name</th>
     							<th>Position</th>		
     							<th>Rating</th>
+    							<th>PA</th>
+    							<th>H</th>
+    							<th>HR</th>
+    							<th>RBI</th>
+    							<th>BB</th>  
   							</tr>
 							<% for(i = 0; i < awayTeam.Lineup.length; i++){ %>
 							<tr>
@@ -49,6 +54,11 @@
 								<td><%= awayTeam.Lineup[i].Name %></td>
 								<td><%= awayTeam.Lineup[i].Position %></td>
 								<td><%= awayTeam.Lineup[i].Rating %></td>
+								<td><%= awayTeam.Lineup[i].GameStats.PlateAppearances %></td>
+								<td><%= awayTeam.Lineup[i].GameStats.Singles + awayTeam.Lineup[i].GameStats.Doubles + awayTeam.Lineup[i].GameStats.Triples + awayTeam.Lineup[i].GameStats.HomeRuns %></td>
+								<td><%= awayTeam.Lineup[i].GameStats.HomeRuns %> </td>
+								<td><%= awayTeam.Lineup[i].GameStats.RunsBattedIn %></td>
+								<td><%= awayTeam.Lineup[i].GameStats.Walks %></td>
 							</tr>
 							<% } %>
 						</table>
