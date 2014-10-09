@@ -345,7 +345,7 @@ define([
         this.halfInning(this.awayRuns, "Top");
         this.halfInning(this.homeRuns, "Bottom");
 
-        console.log("\n" + "After top " + this.currentInning + " the score is Home " + this.homeRuns + "," + " Away " + this.awayRuns + "\n")
+        console.log("\n" + "After top " + this.currentInning + " the score is Home " + this.homeRuns.Value + "," + " Away " + this.awayRuns.Value + "\n")
       }
 
 		  this.$el.find('#playGameButton').text('Game Played')
