@@ -45,9 +45,9 @@ define([
     playGame: function(){
     var innings = 9;
     var homeHits = 0;
-    var this.homeRuns = 0;
+    this.homeRuns = 0;
     var awayHits = 0;
-    var this.awayRuns = 0;
+    this.awayRuns = 0;
 
     for(var currentInning = 1; currentInning - 1 < innings; currentInning++){
         awayOuts = 0;
