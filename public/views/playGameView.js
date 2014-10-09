@@ -25,7 +25,7 @@ define([
         firstBase = 0;
         secondBase = 0;
         thirdBase = 0;
-        system.Print ("Top " + currentInnings + "\n");
+        console.log ("Top " + currentInnings + "\n");
 
         while (a_outs < 3){
             // determine outcome of PA
@@ -51,7 +51,7 @@ define([
                 outcome = "homerun";
               }
 
-            system.Print(outcome);
+            console.log(outcome);
 
             // bases empty
             if (firstBase == 0 && secondBase == 0 && thirdBase == 0){
@@ -331,7 +331,7 @@ define([
               }
             }
 
-        print("\n" + "After top " + repr(current_inning) + " the score is Home " + repr(h_runs) + "," + " Away " + repr(awayRuns) + "\n")
+        console.log("\n" + "After top " + currentInning + " the score is Home " + 0+ "," + " Away " + awayRuns + "\n")
           }
 
 		this.$el.find('#playGameButton').text('Game Played')
