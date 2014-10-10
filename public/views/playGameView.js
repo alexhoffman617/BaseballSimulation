@@ -14,32 +14,139 @@ define([
     	
     },    
     atBat: function(batter){
+	// hitter
+    var hitterOutFreq = 0.7
+    var hitterWalkFreq = 0.03
+    var hitterHRFreq = 0.02
+    var hitterTripleFreq = 0.01
+    var hitterDoubleFreq = 0.05
+    var hitterSingleFreq = 0.19
+
+    // league
+    var leagueOutFreq = 0.683289
+    var leagueWalkFreq = 0.090562
+    var leagueHRFreq = 0.022758
+    var leagueTripleFreq = 0.004615
+    var leagueDoubleFreq = 0.044240
+    var leagueSingleFreq = 0.154533
+
+    // pitcher
+    var pitcherOutFreq = 0.65
+    var pitcherWalkFreq = 0.06
+    var pitcherHRFreq = 0.06
+    var pitcherTripleFreq = 0.01
+    var pitcherDoubleFreq = 0.06
+    var pitcherSingleFreq = 0.16
+
+    // OUTCOME DETERMINATION
+
+    // out
+    var hitterOut = hitterOutFreq/(hitterOutFreq + hitterWalkFreq + hitterHRFreq + hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq)
+    var leagueOut = leagueOutFreq/(leagueOutFreq + leagueWalkFreq + leagueHRFreq + leagueTripleFreq + leagueDoubleFreq + leagueSingleFreq)
+    var pitcherOut = pitcherOutFreq/(pitcherOutFreq + pitcherWalkFreq + pitcherHRFreq + pitcherTripleFreq + pitcherDoubleFreq + pitcherSingleFreq)
+
+    var hitterOutOdds = hitterOut/(1-hitterOut)
+    var leagueOutOdds = leagueOut/(1-leagueOut)
+    var pitcherOutOdds = pitcherOut/(1-pitcherOut)
+
+    var outOdds = hitterOutOdds * (pitcherOutOdds/leagueOutOdds)
+
+    var outProb = outOdds/(1+outOdds)
+
+    var outProbFinal = outProb
+
+    // walk if not out
+    var hitterWalk = hitterWalkFreq/(hitterWalkFreq + hitterHRFreq + hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq)
+    var leagueWalk = leagueWalkFreq/(leagueWalkFreq + leagueHRFreq + leagueTripleFreq + leagueDoubleFreq + leagueSingleFreq)
+    var pitcherWalk = pitcherWalkFreq/(pitcherWalkFreq + pitcherHRFreq + pitcherTripleFreq + pitcherDoubleFreq + pitcherSingleFreq)
+
+    var hitterWalkOdds = hitterWalk/(1-hitterWalk)
+    var leagueWalkOdds = leagueWalk/(1-leagueWalk)
+    var pitcherWalkOdds = pitcherWalk/(1-pitcherWalk)
+
+    var walkOdds = hitterWalkOdds * (pitcherWalkOdds/leagueWalkOdds)
+
+    var walkProb = walkOdds/(1+walkOdds)
+
+    var walkProbFinal = (1-outProbFinal) * walkProb
+
+    // homerun if not out and not walk
+    var hitterHR = hitterHRFreq/(hitterHRFreq + hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq)
+    var leagueHR = leagueHRFreq/(leagueHRFreq + leagueTripleFreq + leagueDoubleFreq + leagueSingleFreq)
+    var pitcherHR = pitcherHRFreq/(pitcherHRFreq + pitcherTripleFreq + pitcherDoubleFreq + pitcherSingleFreq)
+
+    var hitterHROdds = hitterHR/(1-hitterHR)
+    var leagueHROdds = leagueHR/(1-leagueHR)
+    var pitcherHROdds = pitcherHR/(1-pitcherHR)
+
+    var HROdds = hitterHROdds * (pitcherHROdds/leagueHROdds)
+
+    var HRProb = HROdds/(1+HROdds)
+
+    var HRProbFinal = (1-outProbFinal-walkProbFinal) * HRProb
+
+    // triple if not out and if not walk and if not HR
+    var hitterTriple = hitterTripleFreq/(hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq)
+    var leagueTriple = leagueTripleFreq/(leagueTripleFreq + leagueDoubleFreq + leagueSingleFreq)
+    var pitcherTriple = pitcherTripleFreq/(pitcherTripleFreq + pitcherDoubleFreq + pitcherSingleFreq)
+
+    var hitterTripleOdds = hitterTriple/(1-hitterTriple)
+    var leagueTripleOdds = leagueTriple/(1-leagueTriple)
+    var pitcherTripleOdds = pitcherTriple/(1-pitcherTriple)
+
+    var tripleOdds = hitterTripleOdds * (pitcherTripleOdds/leagueTripleOdds)
+
+    var tripleProb = tripleOdds/(1+tripleOdds)
+
+    var tripleProbFinal = (1-outProbFinal-walkProbFinal-HRProbFinal) * tripleProb
+
+    // double if not out and if not walk and if not HR and if not triple
+    var hitterDouble = hitterDoubleFreq/(hitterDoubleFreq + hitterSingleFreq)
+    var leagueDouble = leagueDoubleFreq/(leagueDoubleFreq + leagueSingleFreq)
+    var pitcherDouble = pitcherDoubleFreq/(pitcherDoubleFreq + pitcherSingleFreq)
+
+    var hitterDoubleOdds = hitterDouble/(1-hitterDouble)
+    var leagueDoubleOdds = leagueDouble/(1-leagueDouble)
+    var pitcherDoubleOdds = pitcherDouble/(1-pitcherDouble)
+
+    var doubleOdds = hitterDoubleOdds * (pitcherDoubleOdds/leagueDoubleOdds)
+
+    var doubleProb = doubleOdds/(1+doubleOdds)
+
+    var doubleProbFinal = (1-outProbFinal-walkProbFinal-HRProbFinal-tripleProbFinal) * doubleProb
+
+    // single if not out and if not walk and if not HR and if not triple and if not double
+    var singleProb = 1
+
+    var singleProbFinal = (1-outProbFinal-walkProbFinal-HRProbFinal-tripleProbFinal-doubleProbFinal) * singleProb
+     
+    // use probabilities to find outcome
       var roll = Math.random();
       var outcome;
       batter.gameStats.PlateAppearances ++;
-      if(roll <= 0.683289){
+      if(roll <= outProbFinal){
           outcome = "out";
           
         }
-      else if(roll > 0.683289 && roll <= 0.837822409){                
-          outcome = "single";
-          batter.gameStats.Singles ++;
-        }
-      else if(roll > 0.837822409 && roll <= 0.92838502){
+      else if(roll > outProbFinal && roll <= (outProbFinal + walkProbFinal)){                
           outcome = "walk";
           batter.gameStats.Walks ++;
         }
-      else if(roll > 0.92838502 && roll <= 0.972625158){
-          outcome = "double";
-          batter.gameStats.Doubles ++;
+      else if(roll > (outProbFinal + walkProbFinal) && roll <= (outProbFinal + walkProbFinal + HRProbFinal)){
+          outcome = "homerun";
+          batter.gameStats.HomeRuns ++;
         }
-      else if(roll > 0.972625158 && roll <= 0.977241094){
+      else if(roll > (outProbFinal + walkProbFinal + HRProbFinal) && roll <= (outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal)){
           outcome = "triple";
           batter.gameStats.Triples ++;
         }
+      else if(roll > (outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal) && roll <= (outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal + doubleProbFinal)){
+          outcome = "double";
+          batter.gameStats.Doubles ++;
+        }
       else{
-          outcome = "homerun";
-          batter.gameStats.HomeRuns ++;
+          outcome = "single";
+          batter.gameStats.Singles ++;
         }
 
       console.log(outcome);
