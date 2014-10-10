@@ -51,7 +51,7 @@ define([
         var firstBase = 0;
         var secondBase = 0;
         var thirdBase = 0;
-        this.gameLog += ("<div>" + side + " " + this.currentInning + "</div>");
+        this.gameLog += ("<div class='" + side + "'>" + side + " " + this.currentInning + "</div>");
 
         while (outs < 3){
             // Get Batter

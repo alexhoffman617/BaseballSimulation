@@ -13,7 +13,7 @@ define([
     	'click #playGameTab': 'playGameTab',
     },
     initialize: function(){
-    	
+
     },
     homepage: function() {
     	 var data = {};
