@@ -349,9 +349,9 @@ define([
     },
     playGame: function(){
     var innings = 9;
-    this.homeTeam.AtBat = 1;
+    this.homeTeam.AtBat = 0;
     this.homeTeam.Runs = 0;
-    this.awayTeam.AtBat = 1;
+    this.awayTeam.AtBat = 0;
     this.awayTeam.Runs = 0;
 
     for(this.currentInning = 1; this.currentInning - 1 < innings; this.currentInning++){
@@ -361,7 +361,7 @@ define([
 
       this.tmpl = _.template( template, { homeTeam: this.homeTeam, awayTeam: this.awayTeam });
       this.$el.html(this.tmpl);
-      
+
 		  this.$el.find('#playGameButton').text('Game Played')
       this.$el.find('#playGameButton').attr('class', 'btn btn-success');
     },
