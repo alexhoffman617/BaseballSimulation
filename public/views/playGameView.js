@@ -100,7 +100,7 @@ define([
 
     var HRProb = HROdds/(1+HROdds);
 
-    var HRProbFinal = (1-outProbFinal-walkProbFinal) * HRProb;
+    var HRProbFinal = (1-strikeOutProbFinal-outProbFinal-walkProbFinal) * HRProb;
 
     // triple if not out and if not walk and if not HR
     var hitterTriple = hitterTripleFreq/(hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq);
