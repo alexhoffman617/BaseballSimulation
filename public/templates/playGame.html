@@ -16,7 +16,8 @@
     							<th>H</th>
     							<th>HR</th>
     							<th>RBI</th>
-    							<th>BB</th>    							
+    							<th>BB</th>
+								<th>SO</th>
   							</tr>
   							<% for(i = 0; i < homeTeam.Lineup.length; i++){ %>
 							<tr>
@@ -29,6 +30,7 @@
 								<td><%= homeTeam.Lineup[i].gameStats.HomeRuns %> </td>
 								<td><%= homeTeam.Lineup[i].gameStats.RunsBattedIn %></td>
 								<td><%= homeTeam.Lineup[i].gameStats.Walks %></td>
+								<td><%= homeTeam.Lineup[i].gameStats.StrikeOuts %></td>
 							</tr>
 							<% } %>
 						</table>
@@ -47,7 +49,8 @@
     							<th>H</th>
     							<th>HR</th>
     							<th>RBI</th>
-    							<th>BB</th>  
+    							<th>BB</th>
+								<th>SO</th>
   							</tr>
 							<% for(i = 0; i < awayTeam.Lineup.length; i++){ %>
 							<tr>
@@ -60,6 +63,7 @@
 								<td><%= awayTeam.Lineup[i].gameStats.HomeRuns %> </td>
 								<td><%= awayTeam.Lineup[i].gameStats.RunsBattedIn %></td>
 								<td><%= awayTeam.Lineup[i].gameStats.Walks %></td>
+								<td><%= awayTeam.Lineup[i].gameStats.StrikeOuts %></td>
 							</tr>
 							<% } %>
 						</table>
