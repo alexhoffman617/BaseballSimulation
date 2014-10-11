@@ -32,13 +32,13 @@ define([
     var hitterSingleFreq = batter.Ratings.hitterSingleFreq;
 
     // pitcher
-	var pitcherStrikeOutFreq = pitcher.pitcherStrikeOutFreq;
-    var pitcherOutFreq = pitcher.pitcherOutFreq;
-    var pitcherWalkFreq = pitcher.pitcherWalkFreq;
-    var pitcherHRFreq = pitcher.pitcherHRFreq;
-    var pitcherTripleFreq = pitcher.pitcherTripleFreq;
-    var pitcherDoubleFreq = pitcher.pitcherDoubleFreq;
-    var pitcherSingleFreq = pitcher.pitcherSingleFreq;
+	var pitcherStrikeOutFreq = pitcher.Ratings.pitcherStrikeOutFreq;
+    var pitcherOutFreq = pitcher.Ratings.pitcherOutFreq;
+    var pitcherWalkFreq = pitcher.Ratings.pitcherWalkFreq;
+    var pitcherHRFreq = pitcher.Ratings.pitcherHRFreq;
+    var pitcherTripleFreq = pitcher.Ratings.pitcherTripleFreq;
+    var pitcherDoubleFreq = pitcher.Ratings.pitcherDoubleFreq;
+    var pitcherSingleFreq = pitcher.Ratings.pitcherSingleFreq;
 
     // OUTCOME DETERMINATION
 	
@@ -143,7 +143,8 @@ define([
       batter.gameStats.PlateAppearances ++;
       if(roll <= strikeOutProbFinal){
           outcome = "strikeout";
-          batter.gameStats.StrikeOuts ++
+          batter.gameStats.StrikeOuts ++;
+		  pitcher.gameStats.StrikeOuts ++;
         }
       else if(roll > strikeOutProbFinal && roll <= (strikeOutProbFinal + outProbFinal)){                
           outcome = "out";
@@ -151,22 +152,27 @@ define([
       else if(roll > (strikeOutProbFinal + outProbFinal) && roll <= (strikeOutProbFinal + outProbFinal + walkProbFinal)){
           outcome = "walk";
           batter.gameStats.Walks ++;
+		  pitcher.gameStats.Walks ++;
         }
       else if(roll > (strikeOutProbFinal + outProbFinal + walkProbFinal) && roll <= (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal)){
           outcome = "homerun";
           batter.gameStats.HomeRuns ++;
+		  pitcher.gameStats.Hits ++;
         }
       else if(roll > (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal) && roll <= (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal)){
           outcome = "triple";
           batter.gameStats.Triples ++;
+		  pitcher.gameStats.Hits ++;
         }
 	  else if(roll > (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal) && roll <= (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal + doubleProbFinal)){
           outcome = "double";
           batter.gameStats.Doubles ++;
+		  pitcher.gameStats.Hits ++;
         }
       else{
           outcome = "single";
           batter.gameStats.Singles ++;
+		  pitcher.gameStats.Hits ++;
         }
 
       this.gameLog += ("<div>" + outcome + "</div>");
@@ -182,11 +188,12 @@ define([
         while (outs < 3){
             // Get Batter
             var batter = battingTeam.Lineup[battingTeam.AtBat % 9];
+			var pitcher = pitchingTeam.pitcher;
             this.gameLog += ("<div>" + batter.Name + " is up to bat" + "</div>");
 
 
             // determine outcome of PA
-            var outcome = this.atBat(batter, pitchingTeam.pitcher);
+            var outcome = this.atBat(batter, pitcher);
             battingTeam.AtBat ++;
 
             if(outcome == "strikeout" || outcome == "out"){
@@ -207,6 +214,7 @@ define([
                 else if(outcome == "homerun"){
                     battingTeam.Runs =  battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
               }
 
@@ -234,6 +242,7 @@ define([
                     else{
                         battingTeam.Runs = battingTeam.Runs + 1;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                       }
                   }
                 else if(outcome == "triple"){
@@ -241,11 +250,13 @@ define([
                     thirdBase = 1;
                     battingTeam.Runs = battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 2;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                   }
                 }
 
@@ -265,23 +276,27 @@ define([
                     else{
                         battingTeam.Runs = battingTeam.Runs + 1;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                       }
                   }
                 else if(outcome == "double"){
                     secondBase = 1;
                     battingTeam.Runs = battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
                 else if(outcome == "triple"){
                     secondBase = 0;
                     thirdBase = 1;
                     battingTeam.Runs = battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
                 else if(outcome == "homerun"){
                     secondBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 2;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                   }
               }
 
@@ -295,22 +310,26 @@ define([
                     thirdBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
                 else if(outcome == "double"){
                     secondBase = 1;
                     thirdBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
                 else if(outcome == "triple"){
                     thirdBase = 1;
                     battingTeam.Runs = battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
                 else if(outcome == "homerun"){
                     thirdBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 2;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                   }
               }
 
@@ -327,6 +346,7 @@ define([
                     else{
                         battingTeam.Runs = battingTeam.Runs + 1;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                       }
                     var bsr2 = Math.random();
                     if (bsr > 0.42 && bsr2 > 0.72){
@@ -341,10 +361,12 @@ define([
                         thirdBase = 1;
                         battingTeam.Runs = battingTeam.Runs + 1;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                       }
                     else{
                         battingTeam.Runs = battingTeam.Runs + 2;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                     }
                   }
                 else if(outcome == "triple"){
@@ -353,12 +375,14 @@ define([
                     thirdBase = 1;
                     battingTeam.Runs = battingTeam.Runs + 2;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     secondBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 3;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 3;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 3;
                   }
               }
 
@@ -378,6 +402,7 @@ define([
                       }
                     battingTeam.Runs = battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
                 else if(outcome == "double"){
                     firstBase = 0;
@@ -387,11 +412,13 @@ define([
                         thirdBase = 1;
                         battingTeam.Runs = battingTeam.Runs + 1;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                       }
                     else{
                         thirdBase = 0;
                         battingTeam.Runs = battingTeam.Runs + 2;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                       }
                   }
                 else if(outcome == "triple"){
@@ -399,12 +426,14 @@ define([
                     thirdBase = 1;
                     battingTeam.Runs = battingTeam.Runs + 2;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
                     thirdBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 3;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 3;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 3;
                   }
               }
 
@@ -421,11 +450,13 @@ define([
                         thirdBase = 1;
                         battingTeam.Runs = battingTeam.Runs + 1;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                       }
                     else{
                         thirdBase = 0;
                         battingTeam.Runs = battingTeam.Runs + 2;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                       }
                   }
                 else if(outcome == "double"){
@@ -433,18 +464,21 @@ define([
                     thirdBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 2;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                   }
                 else if(outcome == "triple"){
                     secondBase = 0;
                     thirdBase = 1;
                     battingTeam.Runs = battingTeam.Runs + 2;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                   }
                 else if(outcome == "homerun"){
                     secondBase = 0;
                     thirdBase = 0;
                     battingTeam.Runs = battingTeam.Runs + 3;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 3;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 3;
                   }
               }
 
@@ -453,16 +487,19 @@ define([
                 if (outcome == "walk"){
                     battingTeam.Runs = battingTeam.Runs + 1;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                   }
                 else if(outcome == "single"){
                     var bsr = Math.random();
                     if (bsr <= 0.42){
                         battingTeam.Runs = battingTeam.Runs + 1;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 1;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 1;
                       }
                     else{
                         battingTeam.Runs = battingTeam.Runs + 2;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                       }
                     var bsr_2 = Math.random();
                     if (bsr > 0.42 && bsr_2 > 0.72){
@@ -480,11 +517,13 @@ define([
                         thirdBase = 1;
                         battingTeam.Runs = battingTeam.Runs + 2;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 2;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 2;
                       }
                     else{
                         thirdBase = 0;
                         battingTeam.Runs = battingTeam.Runs + 3;
                         batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 3;
+						pitcher.gameStats.Runs = pitcher.gameStats.Runs + 3;
                       }
                   }
                 else if(outcome == "triple"){
@@ -493,6 +532,7 @@ define([
                     thirdBase = 1;
                     battingTeam.Runs = battingTeam.Runs + 3;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 3;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 3;
                   }
                 else if(outcome == "homerun"){
                     firstBase = 0;
@@ -501,9 +541,11 @@ define([
                     print("Grand Slam HR!");
                     battingTeam.Runs = battingTeam.Runs + 4;
                     batter.gameStats.RunsBattedIn = batter.gameStats.RunsBattedIn + 4;
+					pitcher.gameStats.Runs = pitcher.gameStats.Runs + 4;
                   }
               }
             }
+			pitcher.gameStats.InningsPitched = pitcher.gameStats.InningsPitched + 1
     },
     playInning: function(){
         this.halfInning(this.awayTeam, this.homeTeam, "Top");

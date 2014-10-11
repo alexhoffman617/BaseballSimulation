@@ -34,6 +34,26 @@
 							</tr>
 							<% } %>
 						</table>
+						<table id = "homeTeamPitching" border="3" width="100%">
+  							<tr>
+    							<th>Name</th>	
+    							<th>Rating</th>
+    							<th>IP</th>
+    							<th>H</th>
+    							<th>R</th>
+    							<th>BB</th>
+								<th>SO</th>
+  							</tr>
+							<tr>
+								<td><%= homeTeam.pitcher.Name %></td>
+								<td><%= homeTeam.pitcher.Rating %></td>
+								<td><%= homeTeam.pitcher.gameStats.InningsPitched %></td>
+								<td><%= homeTeam.pitcher.gameStats.Hits %></td>
+								<td><%= homeTeam.pitcher.gameStats.Runs %></td>
+								<td><%= homeTeam.pitcher.gameStats.Walks %></td>
+								<td><%= homeTeam.pitcher.gameStats.StrikeOuts %></td>
+							</tr>
+						</table>
 					</div>
 			</div>
 			<div class="col-lg-6">
@@ -66,6 +86,26 @@
 								<td><%= awayTeam.Lineup[i].gameStats.StrikeOuts %></td>
 							</tr>
 							<% } %>
+						</table>
+						<table id = "awayTeamPitching" border="3" width="100%">
+						<tr>
+							<th>Name</th>	
+							<th>Rating</th>
+							<th>IP</th>
+							<th>H</th>
+							<th>R</th>
+							<th>BB</th>
+							<th>SO</th>
+						</tr>
+						<tr>
+							<td><%= awayTeam.pitcher.Name %></td>
+							<td><%= awayTeam.pitcher.Rating %></td>
+							<td><%= awayTeam.pitcher.gameStats.InningsPitched %></td>
+							<td><%= awayTeam.pitcher.gameStats.Hits %></td>
+							<td><%= awayTeam.pitcher.gameStats.Runs %></td>
+							<td><%= awayTeam.pitcher.gameStats.Walks %></td>
+							<td><%= awayTeam.pitcher.gameStats.StrikeOuts %></td>
+						</tr>
 						</table>
 					</div>
 			</div>

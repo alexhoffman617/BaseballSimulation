@@ -103,14 +103,23 @@ define([
     },
     createRealPitcher: function(){
       var pitcher = {};
-      pitcher.name = this.pitcherArray[0];
-	  pitcher.pitcherStrikeOutFreq = this.pitcherArray[1];
-      pitcher.pitcherOutFreq = this.pitcherArray[2];
-      pitcher.pitcherWalkFreq = this.pitcherArray[3];
-      pitcher.pitcherHRFreq = this.pitcherArray[4];
-      pitcher.pitcherTripleFreq = this.pitcherArray[5];
-      pitcher.pitcherDoubleFreq = this.pitcherArray[6];
-      pitcher.pitcherSingleFreq = this.pitcherArray[7];
+	  pitcher.Ratings = {};
+      pitcher.Name = this.pitcherArray[0];
+	  pitcher.Ratings.pitcherStrikeOutFreq = this.pitcherArray[1];
+      pitcher.Ratings.pitcherOutFreq = this.pitcherArray[2];
+      pitcher.Ratings.pitcherWalkFreq = this.pitcherArray[3];
+      pitcher.Ratings.pitcherHRFreq = this.pitcherArray[4];
+      pitcher.Ratings.pitcherTripleFreq = this.pitcherArray[5];
+      pitcher.Ratings.pitcherDoubleFreq = this.pitcherArray[6];
+      pitcher.Ratings.pitcherSingleFreq = this.pitcherArray[7];
+	  
+	  //GameStats
+	  pitcher.gameStats = {}
+	  pitcher.gameStats.InningsPitched = 0;
+	  pitcher.gameStats.Hits = 0;
+	  pitcher.gameStats.Runs = 0;
+	  pitcher.gameStats.Walks = 0;
+	  pitcher.gameStats.StrikeOuts = 0;
 
       return pitcher;
     },
