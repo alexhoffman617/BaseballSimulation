@@ -13,7 +13,8 @@ define([
     },
     initialize: function(){
     // league frequencies
-    this.leagueOutFreq = 0.683289
+	this.leagueStrikeOutFreq = 0.203563
+    this.leagueOutFreq = 0.479726
     this.leagueWalkFreq = 0.090562
     this.leagueHRFreq = 0.022758
     this.leagueTripleFreq = 0.004615
@@ -21,7 +22,8 @@ define([
     this.leagueSingleFreq = 0.154533
     },    
     atBat: function(batter, pitcher){
-	  // hitter
+	// hitter
+	var hitterStrikeOutFreq = batter.Ratings.hitterStrikeOutFreq;
     var hitterOutFreq = batter.Ratings.hitterOutFreq;
     var hitterWalkFreq = batter.Ratings.hitterWalkFreq;
     var hitterHRFreq = batter.Ratings.hitterHRFreq;
@@ -30,6 +32,7 @@ define([
     var hitterSingleFreq = batter.Ratings.hitterSingleFreq;
 
     // pitcher
+	var pitcherStrikeOutFreq = pitcher.pitcherStrikeOutFreq;
     var pitcherOutFreq = pitcher.pitcherOutFreq;
     var pitcherWalkFreq = pitcher.pitcherWalkFreq;
     var pitcherHRFreq = pitcher.pitcherHRFreq;
@@ -38,6 +41,21 @@ define([
     var pitcherSingleFreq = pitcher.pitcherSingleFreq;
 
     // OUTCOME DETERMINATION
+	
+	//strikeout
+	var hitterStrikeOut = hitterStrikeOutFreq/(hitterStrikeOutFreq + hitterOutFreq + hitterWalkFreq + hitterHRFreq + hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq);
+    var leagueStrikeOut = this.leagueStrikeOutFreq/(this.leagueStrikeOutFreq + this.leagueOutFreq + this.leagueWalkFreq + this.leagueHRFreq + this.leagueTripleFreq + this.leagueDoubleFreq + this.leagueSingleFreq);
+    var pitcherStrikeOut = pitcherStrikeOutFreq/(pitcherStrikeOutFreq + pitcherOutFreq + pitcherWalkFreq + pitcherHRFreq + pitcherTripleFreq + pitcherDoubleFreq + pitcherSingleFreq);
+
+    var hitterStrikeOutOdds = hitterStrikeOut/(1-hitterStrikeOut);
+    var leagueStrikeOutOdds = leagueStrikeOut/(1-leagueStrikeOut);
+    var pitcherStrikeOutOdds = pitcherStrikeOut/(1-pitcherStrikeOut);
+
+    var strikeOutOdds = hitterStrikeOutOdds * (pitcherStrikeOutOdds/leagueStrikeOutOdds);
+
+    var strikeOutProb = strikeOutOdds/(1+strikeOutOdds);
+
+    var strikeOutProbFinal = strikeOutProb;
 
     // out
     var hitterOut = hitterOutFreq/(hitterOutFreq + hitterWalkFreq + hitterHRFreq + hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq);
@@ -52,7 +70,7 @@ define([
 
     var outProb = outOdds/(1+outOdds);
 
-    var outProbFinal = outProb;
+    var outProbFinal = (1-strikeOutProbFinal) * outProb;
 
     // walk if not out
     var hitterWalk = hitterWalkFreq/(hitterWalkFreq + hitterHRFreq + hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq);
@@ -67,7 +85,7 @@ define([
 
     var walkProb = walkOdds/(1+walkOdds);
 
-    var walkProbFinal = (1-outProbFinal) * walkProb;
+    var walkProbFinal = (1-strikeOutProbFinal-outProbFinal) * walkProb;
 
     // homerun if not out and not walk
     var hitterHR = hitterHRFreq/(hitterHRFreq + hitterTripleFreq + hitterDoubleFreq + hitterSingleFreq);
@@ -97,7 +115,7 @@ define([
 
     var tripleProb = tripleOdds/(1+tripleOdds);
 
-    var tripleProbFinal = (1-outProbFinal-walkProbFinal-HRProbFinal) * tripleProb;
+    var tripleProbFinal = (1-strikeOutProbFinal-outProbFinal-walkProbFinal-HRProbFinal) * tripleProb;
 
     // double if not out and if not walk and if not HR and if not triple
     var hitterDouble = hitterDoubleFreq/(hitterDoubleFreq + hitterSingleFreq);
@@ -112,34 +130,37 @@ define([
 
     var doubleProb = doubleOdds/(1+doubleOdds);
 
-    var doubleProbFinal = (1-outProbFinal-walkProbFinal-HRProbFinal-tripleProbFinal) * doubleProb;
+    var doubleProbFinal = (1-strikeOutProbFinal-outProbFinal-walkProbFinal-HRProbFinal-tripleProbFinal) * doubleProb;
 
     // single if not out and if not walk and if not HR and if not triple and if not double
     var singleProb = 1;
 
-    var singleProbFinal = (1-outProbFinal-walkProbFinal-HRProbFinal-tripleProbFinal-doubleProbFinal) * singleProb;
+    var singleProbFinal = (1-strikeOutProbFinal-outProbFinal-walkProbFinal-HRProbFinal-tripleProbFinal-doubleProbFinal) * singleProb;
      
     // use probabilities to find outcome
       var roll = Math.random();
       var outcome;
       batter.gameStats.PlateAppearances ++;
-      if(roll <= outProbFinal){
-          outcome = "out";
-          
+      if(roll <= strikeOutProbFinal){
+          outcome = "strikeout";
+          batter.gameStats.StrikeOuts ++
         }
-      else if(roll > outProbFinal && roll <= (outProbFinal + walkProbFinal)){                
+      else if(roll > strikeOutProbFinal && roll <= (strikeOutProbFinal + outProbFinal)){                
+          outcome = "out";
+        }
+      else if(roll > (strikeOutProbFinal + outProbFinal) && roll <= (strikeOutProbFinal + outProbFinal + walkProbFinal)){
           outcome = "walk";
           batter.gameStats.Walks ++;
         }
-      else if(roll > (outProbFinal + walkProbFinal) && roll <= (outProbFinal + walkProbFinal + HRProbFinal)){
+      else if(roll > (strikeOutProbFinal + outProbFinal + walkProbFinal) && roll <= (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal)){
           outcome = "homerun";
           batter.gameStats.HomeRuns ++;
         }
-      else if(roll > (outProbFinal + walkProbFinal + HRProbFinal) && roll <= (outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal)){
+      else if(roll > (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal) && roll <= (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal)){
           outcome = "triple";
           batter.gameStats.Triples ++;
         }
-      else if(roll > (outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal) && roll <= (outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal + doubleProbFinal)){
+	  else if(roll > (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal) && roll <= (strikeOutProbFinal + outProbFinal + walkProbFinal + HRProbFinal + tripleProbFinal + doubleProbFinal)){
           outcome = "double";
           batter.gameStats.Doubles ++;
         }
@@ -168,7 +189,7 @@ define([
             var outcome = this.atBat(batter, pitchingTeam.pitcher);
             battingTeam.AtBat ++;
 
-            if(outcome == "out"){
+            if(outcome == "strikeout" || outcome == "out"){
             outs = outs + 1;
             }
 
