@@ -11,8 +11,8 @@
     							<th>Order</th>
     							<th>Name</th>
     							<th>Position</th>		
-    							<th>Rating</th>
-    							<th>PA</th>
+    							<th>AB</th>
+    							<th>R</th>
     							<th>H</th>
     							<th>HR</th>
     							<th>RBI</th>
@@ -24,8 +24,8 @@
 								<td><%= i + 1 %></td>
 								<td><%= homeTeam.Lineup[i].Name %></td>
 								<td><%= homeTeam.Lineup[i].Position %></td>
-								<td><%= homeTeam.Lineup[i].Rating %></td>
-								<td><%= homeTeam.Lineup[i].gameStats.PlateAppearances %></td>
+								<td><%= homeTeam.Lineup[i].gameStats.PlateAppearances - homeTeam.Lineup[i].gameStats.Walks %></td>
+								<td><%= homeTeam.Lineup[i].gameStats.Runs %></td>
 								<td><%= homeTeam.Lineup[i].gameStats.Singles + homeTeam.Lineup[i].gameStats.Doubles + homeTeam.Lineup[i].gameStats.Triples + homeTeam.Lineup[i].gameStats.HomeRuns %></td>
 								<td><%= homeTeam.Lineup[i].gameStats.HomeRuns %> </td>
 								<td><%= homeTeam.Lineup[i].gameStats.RunsBattedIn %></td>
@@ -64,8 +64,8 @@
     							<th>Order</th>
     							<th>Name</th>
     							<th>Position</th>		
-    							<th>Rating</th>
-    							<th>PA</th>
+    							<th>AB</th>
+    							<th>R</th>
     							<th>H</th>
     							<th>HR</th>
     							<th>RBI</th>
@@ -77,8 +77,8 @@
 								<td><%= i + 1 %></td>
 								<td><%= awayTeam.Lineup[i].Name %></td>
 								<td><%= awayTeam.Lineup[i].Position %></td>
-								<td><%= awayTeam.Lineup[i].Rating %></td>
-								<td><%= awayTeam.Lineup[i].gameStats.PlateAppearances %></td>
+								<td><%= awayTeam.Lineup[i].gameStats.PlateAppearances - awayTeam.Lineup[i].gameStats.Walks %></td>
+								<td><%= awayTeam.Lineup[i].gameStats.Runs %></td>
 								<td><%= awayTeam.Lineup[i].gameStats.Singles + awayTeam.Lineup[i].gameStats.Doubles + awayTeam.Lineup[i].gameStats.Triples + awayTeam.Lineup[i].gameStats.HomeRuns %></td>
 								<td><%= awayTeam.Lineup[i].gameStats.HomeRuns %> </td>
 								<td><%= awayTeam.Lineup[i].gameStats.RunsBattedIn %></td>
